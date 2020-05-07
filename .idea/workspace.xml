@@ -1,9 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="Refactoring SearchPanel and ItemStatusFilter to separate component - Search">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="GingerBoy14 &lt;maks.27.04.2002@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZwofnLrN5jE9hIKvkonLExnb05" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="D:\Programs\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\WEB\React\todo-list\src\components\Search\SearchPanel" />
+      <recent name="D:\Project\WEB\React\todo-list\src\components\TodoListItem" />
+      <recent name="D:\Project\WEB\React\todo-list\src\components\ItemStatusFilter" />
+      <recent name="D:\Project\WEB\React\todo-list\src\components\Search" />
+      <recent name="D:\Project\WEB\React\todo-list\src\components\TodoList" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="" />
+      <created>1585759622821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585759622821</updated>
+      <workItem from="1585759624782" duration="45678000" />
+      <workItem from="1586167752373" duration="249000" />
+      <workItem from="1587623956981" duration="733000" />
+      <workItem from="1587747909322" duration="43000" />
+      <workItem from="1588583834602" duration="1805000" />
+      <workItem from="1588664568478" duration="17307000" />
+      <workItem from="1588794707700" duration="26331000" />
+    </task>
+    <task id="LOCAL-00001" summary="working TODO list without saving it">
+      <created>1587624219746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587624219746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working TODO list without saving it" />
+    <MESSAGE value="Refactoring SearchPanel and ItemStatusFilter to separate component - Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring SearchPanel and ItemStatusFilter to separate component - Search" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585761325345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585761325345" />
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1585761291193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585761291193" />
+    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2" timestamp="1588877607741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877607741" />
+    <state x="0" y="84" key="DiffContextDialog" timestamp="1588877312780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="84" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877312780" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588865787849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588865787849" />
+    <state width="949" height="282" key="GridCell.Tab.0.bottom" timestamp="1588877608182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="949" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608182" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243779" />
+    <state width="949" height="282" key="GridCell.Tab.0.center" timestamp="1588877608181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="949" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243778" />
+    <state width="949" height="282" key="GridCell.Tab.0.left" timestamp="1588877608181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="949" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243777" />
+    <state width="949" height="282" key="GridCell.Tab.0.right" timestamp="1588877608181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="949" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243778" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587624242887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587624242887" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1588865604579">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588865604579" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585823193705">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585823193705" />
   </component>
 </project>

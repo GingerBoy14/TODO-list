@@ -3,17 +3,19 @@ import "./TodoListItem.css"
 
 const TodoListItem = (props) => {
 
-    const {text, done, important,
+    const {
+        text, done, important,
         onDeleted,
         onToggleImportant,
-        onToggleDone} = props;
-    let classNames = 'todo-list-item';
+        onToggleDone
+    } = props;
 
+    let classNames = `todo-list-item`;
     if(done){
-        classNames += ' done';
+        classNames += ` done`;
     }
     if(important){
-        classNames += ' important';
+        classNames += ` important`;
     }
 
     return (
