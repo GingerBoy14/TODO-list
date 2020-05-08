@@ -1,17 +1,29 @@
-.todo-list-item .todo-list-item-text {
-    width: 70%;
-    font-size:1.25rem;
-}
 
 .todo-list-item button{
     width: 35px;
     margin: 3px;
 }
+
 .todo-list-item-text{
+    font-size:1.25rem;
     margin-left: 1.25rem;
     line-height: 35px;
     cursor: pointer;
     user-select: none;
+
+
+    display: inline-flex;
+    width: 70%;
+    white-space: pre-wrap;
+    overflow: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+@media only screen and (max-width: 425px) {
+    .todo-list-item-text {
+        width: 60%;
+    }
 }
 .todo-list-item.done .todo-list-item-text{
     text-decoration: line-through;

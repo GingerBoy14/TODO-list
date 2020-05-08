@@ -25,20 +25,26 @@ const TodoListItem = (props) => {
                  onClick={onToggleDone}>
                  {text}
              </span>
-            <button type="button"
-                    className="btn btn-outline-success btn-sm float-right"
-                    onClick={onToggleImportant}>
-                <i className="fa fa-exclamation"/>
-            </button>
-            <button type="button"
-                    className="btn btn-outline-danger btn-sm float-right"
-                    onClick={onDeleted}>
-                <i className="fa fa-trash-o"/>
-            </button>
+
+            {itemButton(
+                        onToggleImportant,
+                "btn-outline-success",
+                   "fa fa-exclamation")}
+
+            {itemButton(
+                        onDeleted,
+                "btn-outline-danger",
+                   "fa fa-trash-o")}
 
         </span>
     );
 };
 
-
+const itemButton = (onClick, btnType, icon) => (
+      <button type="button"
+              className={`btn ${btnType} btn-sm float-right`}
+              onClick={onClick}>
+          <i className={`${icon}`}/>
+      </button>
+  );
 export default TodoListItem;

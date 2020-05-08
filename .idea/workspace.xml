@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="Refactoring SearchPanel and ItemStatusFilter to separate component - Search">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/index.js" afterDir="false" />
+    <list default="true" id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="Add scroll for list if there are more than 9 items">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemStatusFilter/ItemStatusFilter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/ItemStatusFilter/ItemStatusFilter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemStatusFilter/ItemStatusFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/ItemStatusFilter/ItemStatusFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemStatusFilter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/ItemStatusFilter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchPanel/SearchPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/TodoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\WEB\React\todo-list\src\components\Search" />
+      <recent name="D:\Project\WEB\React\todo-list\src\components\TodoList" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\Search\SearchPanel" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\TodoListItem" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\ItemStatusFilter" />
-      <recent name="D:\Project\WEB\React\todo-list\src\components\Search" />
-      <recent name="D:\Project\WEB\React\todo-list\src\components\TodoList" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -124,7 +116,7 @@
       <workItem from="1587747909322" duration="43000" />
       <workItem from="1588583834602" duration="1805000" />
       <workItem from="1588664568478" duration="17307000" />
-      <workItem from="1588794707700" duration="26331000" />
+      <workItem from="1588794707700" duration="44460000" />
     </task>
     <task id="LOCAL-00001" summary="working TODO list without saving it">
       <created>1587624219746</created>
@@ -133,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587624219746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactoring SearchPanel and ItemStatusFilter to separate component - Search">
+      <created>1588877691819</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588877691820</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,10 +165,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585761291193" />
-    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2" timestamp="1588877607741">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2280" y="0" width="1199" height="1040" key="CommitChangelistDialog2" timestamp="1588959222397">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877607741" />
+    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877840227" />
+    <state x="2280" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588959222397" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1588877312780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -178,30 +178,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588865787849" />
-    <state width="949" height="282" key="GridCell.Tab.0.bottom" timestamp="1588877608182">
+    <state width="949" height="282" key="GridCell.Tab.0.bottom" timestamp="1588952739871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608182" />
+    <state width="949" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588952739871" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243779" />
-    <state width="949" height="282" key="GridCell.Tab.0.center" timestamp="1588877608181">
+    <state width="949" height="282" key="GridCell.Tab.0.center" timestamp="1588952739870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="949" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588952739870" />
     <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243778" />
-    <state width="949" height="282" key="GridCell.Tab.0.left" timestamp="1588877608181">
+    <state width="949" height="282" key="GridCell.Tab.0.left" timestamp="1588952739870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="949" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588952739870" />
     <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243777" />
-    <state width="949" height="282" key="GridCell.Tab.0.right" timestamp="1588877608181">
+    <state width="949" height="282" key="GridCell.Tab.0.right" timestamp="1588952739871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877608181" />
+    <state width="949" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588952739871" />
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588874243778" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587624242887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587624242887" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1588953803339">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588953803339" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588865604579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

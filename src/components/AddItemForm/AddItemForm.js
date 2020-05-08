@@ -15,7 +15,7 @@ export default class AddItemForm extends Component{
     onSubmit = (e) => {
         e.preventDefault();
         if(this.state.text){
-            this.props.onItemAdd(this.state.text)
+            this.props.onItemAdd(this.state.text);
             this.setState({
                 text: ''
             });
@@ -24,7 +24,7 @@ export default class AddItemForm extends Component{
 
     render() {
         return(
-            <form className="item-add-form d-flex"
+            <form className="item-add-form"
                   onSubmit={this.onSubmit}>
                 <input type="text"
                        className="search-input form-control"
@@ -32,7 +32,7 @@ export default class AddItemForm extends Component{
                        onChange={this.onTextChange}
                        value={this.state.text}/>
                 <button type="button"
-                        className="btn btn-outline-primary"
+                        className="add-btn btn btn-outline-primary"
                         onClick={this.onSubmit}>Add Item</button>
             </form>
         );

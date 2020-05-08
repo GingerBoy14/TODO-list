@@ -104,6 +104,7 @@ export default class App extends Component{
                     displayData={this.searchResult}/>
 
                 <TodoList
+
                     todoItem = {visibleItems}
                     onDeleted={this.deleteItem}
                     onToggleDone={this.onToggleDone}
