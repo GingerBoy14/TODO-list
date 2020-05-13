@@ -10,6 +10,11 @@
     color: grey;
     cursor: pointer;
 }
+.app-header .user-bar .email::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f105";
+}
 
 .app-header .user-bar .button-enter {
     opacity: 0;
@@ -32,7 +37,7 @@
 
 .app-header .user-bar .button{
     color: #808080;
-    transition: color .25s ease-in;
+    transition: color .15s ease-in;
 }
 .app-header .user-bar .button:hover{
     cursor: pointer;

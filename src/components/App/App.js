@@ -7,6 +7,7 @@ import AddItemForm from "../AddItemForm";
 
 import "./App.css"
 import Search from "../Search";
+import Form from "../Form";
 
 export default class App extends Component{
 
@@ -112,6 +113,7 @@ export default class App extends Component{
 
                 <AddItemForm
                     onItemAdd = {this.addItem}/>
+                    <Form/>
             </div>
         );
     };

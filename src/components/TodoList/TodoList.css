@@ -1,9 +1,12 @@
 .todo-list .list-group-item{
-    padding: .25rem .75rem;
+    padding: .25rem .2rem .25rem .75rem;
 }
 .todo-list-hidden{
     height: 425px;
     overflow-y: auto;
+}
+.list-group-item{
+    margin-bottom: .2rem;
 }
 .break-point{
     margin-top: 0.2rem;

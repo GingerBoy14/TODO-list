@@ -15,7 +15,7 @@ export default class UserFunctions extends Component{
 
         return(
                 <div className="user-bar">
-                    <span className="email" onClick={this.wantLogOut}><i className="fas fa-angle-right"/> maks.27.04.2002@gmail.com</span>
+                    <span className="email" onClick={this.wantLogOut}> maks.27.04.2002@gmail.com</span>
                     <CSSTransition
                         in={this.state.logOut}
                         timeout={300}
