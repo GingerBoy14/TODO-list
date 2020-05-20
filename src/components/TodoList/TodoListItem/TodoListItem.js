@@ -20,31 +20,24 @@ const TodoListItem = (props) => {
 
     return (
         <span className={classNames}>
-             <span
-                 className="todo-list-item-text"
-                 onClick={onToggleDone}>
+
+            <div
+                className="todo-list-item-text"
+                onClick={onToggleDone}>
                  {text}
-             </span>
-
-            {itemButton(
-                        onToggleImportant,
-                "btn-outline-success",
-                   "fa fa-exclamation")}
-
-            {itemButton(
-                        onDeleted,
-                "btn-outline-danger",
-                   "fa fa-trash-o")}
-
+             </div>
+            <i className="menu-popup fas fa-ellipsis-h fa-lg"/>
         </span>
     );
 };
 
-const itemButton = (onClick, btnType, icon) => (
-      <button type="button"
-              className={`btn ${btnType} btn-sm float-right`}
-              onClick={onClick}>
-          <i className={`${icon}`}/>
-      </button>
-  );
+const itemButton = (onClick, btnType, icon) => {
+    return(
+        <button type="button"
+                className={`btn ${btnType} btn-sm float-right`}
+                onClick={onClick}>
+            <i className={`${icon}`}/>
+        </button>
+    )
+};
 export default TodoListItem;

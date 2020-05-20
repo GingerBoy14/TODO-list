@@ -1,58 +1,47 @@
-.content{
+.login-register-form{
     max-width: 450px;
+    height: 200px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
+                0 .7rem 1rem rgba(0, 0, 0, 0.22);
+    border-radius: .25rem;
+    padding: .4rem .75rem;
 }
-
 
 .nav-item{
     width: 50%;
 }
-.nav-pills{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+
+.login-register-form nav .slider{
+    position: relative;
+    width: 50%;
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
 }
+.login-register-form nav .slider .indicator{
+     position: relative;
+     width: 15%;
+     max-width: 100%;
+     margin: 0 auto;
+     height: .2rem;
+     background: #17a2b8;
+     border-radius: .25rem;
+ }
 
 .nav-pills .nav-link{
     font-weight: bold;
     font-size: 1.1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: .35rem 0;
     height: 100%;
     text-align: center;
-    background: #808080;
-    color: #fff;
-    border-radius: 0 30px 0 15px;
-
+    color: #454545;
+    transition: color .25s ease-in-out;
+}
+.nav-pills .nav-link:hover{
+    color: #7D7D7D;
 }
 .nav-pills .nav-link.active{
-    border-top-right-radius: 25px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 0;
-    background:  #17a2b8;
+    color: #17a2b8;
+    background:  #fff;
 }
 
-.nav-pills .nav-item{
-    border-top-right-radius: 30px;
-    background:  #17a2b8;
-}
-.nav-pills .nav-item.active{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 0;
-    background:  #808080;
-}
-.tab-content{
-    background-color: #17a2b8;
-
-    color: #fff;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
-    padding: 2rem;
-}
-
-.tab-content button{
-    width: 100px;
-    margin: 0 auto;
-    float: right;
-}

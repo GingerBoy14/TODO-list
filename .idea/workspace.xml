@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="create a prototype of login/register form">
-      <change afterPath="$PROJECT_DIR$/src/components/Form/Form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/LoginForm/LoginForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/LoginForm/LoginForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/RegisterForm/RegisterForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/RegisterForm/RegisterForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/index.js" afterDir="false" />
+    <list default="true" id="db8ab0a3-ecfe-40ad-9d0d-924b06968ac9" name="Default Changelist" comment="create loading component for future loading app when user log in, made the layout for login form also add the animation for tabs">
+      <change afterPath="$PROJECT_DIR$/src/components/Loading/Loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loading/Loading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/UserFunctions/UserFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoListItem/TodoListItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -36,6 +39,11 @@
       <list>
         <option value="GingerBoy14 &lt;maks.27.04.2002@gmail.com&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Dev" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,11 +71,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\WEB\React\todo-list\src\components\Form" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\Search" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\TodoList" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\Search\SearchPanel" />
       <recent name="D:\Project\WEB\React\todo-list\src\components\TodoListItem" />
-      <recent name="D:\Project\WEB\React\todo-list\src\components\ItemStatusFilter" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -100,6 +108,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -118,7 +129,12 @@
       <workItem from="1588664568478" duration="17307000" />
       <workItem from="1588794707700" duration="45048000" />
       <workItem from="1589086323079" duration="27253000" />
-      <workItem from="1589359436687" duration="8961000" />
+      <workItem from="1589359436687" duration="11496000" />
+      <workItem from="1589493761449" duration="6967000" />
+      <workItem from="1589723717971" duration="746000" />
+      <workItem from="1589834417348" duration="6848000" />
+      <workItem from="1589873448215" duration="11309000" />
+      <workItem from="1589968272247" duration="14872000" />
     </task>
     <task id="LOCAL-00001" summary="working TODO list without saving it">
       <created>1587624219746</created>
@@ -141,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588959256282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create a prototype of login/register form">
+      <created>1589379966742</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589379966742</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,15 +182,40 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="login-register-form" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working TODO list without saving it" />
     <MESSAGE value="Refactoring SearchPanel and ItemStatusFilter to separate component - Search" />
     <MESSAGE value="Add scroll for list if there are more than 9 items" />
     <MESSAGE value="create a prototype of login/register form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create a prototype of login/register form" />
+    <MESSAGE value="create loading component for future loading app when user log in, made the layout for login form also add the animation for tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="create loading component for future loading app when user log in, made the layout for login form also add the animation for tabs" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" width="816" height="730" key="#Intentions" timestamp="1589380323761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" width="816" height="730" key="#Intentions/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589380323761" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585761325345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -176,38 +224,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585761291193" />
-    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2" timestamp="1589379840890">
+    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2" timestamp="1590003805566">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589379840890" />
+    <state x="360" y="0" width="1199" height="1040" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590003805566" />
     <state x="2280" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588959253045" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1588877312780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588877312780" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588865787849">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1589724677240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588865787849" />
-    <state width="949" height="282" key="GridCell.Tab.0.bottom" timestamp="1589379841442">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589724677240" />
+    <state width="949" height="281" key="GridCell.Tab.0.bottom" timestamp="1590003771943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589379841442" />
+    <state width="949" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590003771943" />
     <state width="949" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589118452805" />
-    <state width="949" height="282" key="GridCell.Tab.0.center" timestamp="1589379841441">
+    <state width="949" height="281" key="GridCell.Tab.0.center" timestamp="1590003771942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589379841441" />
+    <state width="949" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590003771942" />
     <state width="949" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589118452804" />
-    <state width="949" height="282" key="GridCell.Tab.0.left" timestamp="1589379841441">
+    <state width="949" height="281" key="GridCell.Tab.0.left" timestamp="1590003771942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589379841441" />
+    <state width="949" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590003771942" />
     <state width="949" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589118452803" />
-    <state width="949" height="282" key="GridCell.Tab.0.right" timestamp="1589379841442">
+    <state width="949" height="281" key="GridCell.Tab.0.right" timestamp="1590003771942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589379841442" />
+    <state width="949" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590003771942" />
     <state width="949" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589118452804" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587624242887">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -217,10 +265,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588953803339" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1588865604579">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1589972235433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588865604579" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589972235433" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585823193705">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

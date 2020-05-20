@@ -8,7 +8,7 @@ import AddItemForm from "../AddItemForm";
 import "./App.css"
 import Search from "../Search";
 import Form from "../Form";
-
+import Loading from "../Loading";
 export default class App extends Component{
 
     lastId = 0;
@@ -96,6 +96,7 @@ export default class App extends Component{
 
         return(
             <div className="todo-app container">
+
                 <AppHeader
                     toDo={todoCount}
                     done={doneCount}/>
@@ -114,6 +115,7 @@ export default class App extends Component{
                 <AddItemForm
                     onItemAdd = {this.addItem}/>
                     <Form/>
+                    <Loading/>
             </div>
         );
     };

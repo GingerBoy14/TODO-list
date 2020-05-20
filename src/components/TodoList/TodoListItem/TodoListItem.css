@@ -1,30 +1,28 @@
+.todo-list-item{
+    display: flex;
 
-.todo-list-item button{
-    width: 35px;
-    margin: .2rem;
 }
 
-
+.menu-popup{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: .25rem;
+    transition: color .25s ease-in-out;
+}
+.menu-popup:hover{
+    color: #17a2b8;
+}
 .todo-list-item-text{
     font-size: 1.25rem;
-    margin-left: 1rem;
     line-height: 35px;
     cursor: pointer;
     user-select: none;
-
-
-    display: inline-flex;
-    width: 70%;
-    white-space: pre-wrap;
-    overflow: auto;
-    word-break: break-word;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-@media only screen and (max-width: 425px) {
-    .todo-list-item-text {
-        width: 60%;
-    }
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    align-items: center;
 }
 .todo-list-item.done .todo-list-item-text{
     text-decoration: line-through;
