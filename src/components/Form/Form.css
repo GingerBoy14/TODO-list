@@ -1,6 +1,5 @@
 .login-register-form{
     max-width: 450px;
-    height: 200px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
@@ -8,40 +7,7 @@
     border-radius: .25rem;
     padding: .4rem .75rem;
 }
-
-.nav-item{
-    width: 50%;
+.tab-content{
+    margin-bottom: 1rem;
+    margin-top: .75rem;
 }
-
-.login-register-form nav .slider{
-    position: relative;
-    width: 50%;
-    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
-}
-.login-register-form nav .slider .indicator{
-     position: relative;
-     width: 15%;
-     max-width: 100%;
-     margin: 0 auto;
-     height: .2rem;
-     background: #17a2b8;
-     border-radius: .25rem;
- }
-
-.nav-pills .nav-link{
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: .35rem 0;
-    height: 100%;
-    text-align: center;
-    color: #454545;
-    transition: color .25s ease-in-out;
-}
-.nav-pills .nav-link:hover{
-    color: #7D7D7D;
-}
-.nav-pills .nav-link.active{
-    color: #17a2b8;
-    background:  #fff;
-}
-

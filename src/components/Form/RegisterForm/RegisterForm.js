@@ -1,16 +1,12 @@
 import React from "react";
+import {withRouter} from "react-router-dom";
 
-const RegisterForm = () =>{
+const RegisterForm = ({ history }) =>{
 
     return(
-        <div id="regis" className="container tab-pane fade ">
+        <div className="container">
             <form>
-                <div className="form-group">
-                    <label htmlFor="InputName">Full Name</label>
-                    <input type="text" className="form-control is-valid" id="InputName" placeholder="Full Name"/>
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with
-                        anyone else.</small>
-                </div>
+
                 <div className="form-group">
                     <label htmlFor="InputUsername">Username</label>
                     <input type="text" className="form-control is-valid" id="InputUsername"
@@ -31,14 +27,16 @@ const RegisterForm = () =>{
                            placeholder="Password"/>
                     <small id="emailHelp" className="form-text text-muted">Password incorrect.</small>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputPasswordVer">Verify Password</label>
-                    <input type="password" className="form-control is-invalid" id="exampleInputPasswordVer"
-                           placeholder="Password"/>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+
+                <button type="submit"
+                        className="btn"
+                        onClick={
+                            ()=>history.push("/todoApp")
+                        }>
+                    Submit
+                </button>
             </form>
         </div>
     );
 };
-export default RegisterForm;
+export default withRouter(RegisterForm);

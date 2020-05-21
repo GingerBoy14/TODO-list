@@ -1,8 +1,9 @@
 import React from "react";
+import {withRouter} from "react-router-dom";
 
-const LoginForm = () =>{
+const LoginForm = ({ history }) =>{
     return(
-        <div id="login" className="container tab-pane active">
+        <div className="container">
             <form>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Email address</label>
@@ -17,10 +18,16 @@ const LoginForm = () =>{
                            placeholder="Password"/>
                     <small id="emailHelp" className="form-text text-muted">Password incorrect.</small>
                 </div>
-                <button type="submit" className="btn">Submit</button>
+                <button type="submit"
+                        className="btn"
+                        onClick={
+                            ()=>history.push("/todoApp")
+                        }>
+                    Submit
+                </button>
             </form>
         </div>
     );
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);
