@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React from "react";
 import TodoListItem from "./TodoListItem";
 import './TodoList.css'
 
@@ -7,24 +7,14 @@ import './TodoList.css'
 *
 * */
  const TodoList = ({todoItem, onDeleted, onToggleImportant, onToggleDone}) =>{
-     const messagesEndRef = useRef(null);
-     const [scrollActive, setScrollActive] = useState(false);
-     const scrollToBottom = () => {
-         if (scrollActive){
-             messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-         }
-         setScrollActive(true);
-     };
-     useEffect(scrollToBottom, [todoItem]);
-
      const List = todoItem.map((item) =>{
                 const { id, ...itemProps} = item;
-                return(
-                    <li key={id} className="list-group-item" >
+         return(
+                    <li key={id} className="list-group-item">
                         <TodoListItem {...itemProps}
-                                      onDeleted={()=>{onDeleted(id); setScrollActive(false);}}
-                                      onToggleImportant={()=>{onToggleImportant(id);setScrollActive(false);}}
-                                      onToggleDone={()=>{onToggleDone(id);setScrollActive(false);}}/>
+                                      onDeleted={()=>{onDeleted(id);}}
+                                      onToggleImportant={()=>{onToggleImportant(id);}}
+                                      onToggleDone={()=>{onToggleDone(id);}}/>
                     </li>
                 )
             }
@@ -37,7 +27,6 @@ import './TodoList.css'
             <div className="item-list">
                 <ul className={`list-group todo-list ${hidden}`}>
                     {List}
-                    <div className="break-point" ref={messagesEndRef}/>
                 </ul>
             </div>
         );

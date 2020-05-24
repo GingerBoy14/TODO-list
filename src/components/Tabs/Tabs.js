@@ -14,7 +14,7 @@ const Tabs = ({ changeContent }) =>{
                       className={`nav-link ${active(activate)}`}
                       onClick={()=>{
                           setActive(true);
-                          changeContent(1);
+                          changeContent('login');
                       }}>
                       Login
                   </span>
@@ -24,7 +24,7 @@ const Tabs = ({ changeContent }) =>{
                       className={`nav-link ${active(!activate)}`}
                       onClick={()=>{
                           setActive(false);
-                          changeContent(2);
+                          changeContent('reg');
                       }}>
                       Register
                   </span>

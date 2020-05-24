@@ -37,8 +37,9 @@
 
 
 .app-header .user-bar .button{
+    text-decoration: none;
     color: #808080;
-    transition: color .15s ease-in;
+    transition: color .15s ease-in-out;
 }
 .app-header .user-bar .button:hover{
     cursor: pointer;

@@ -26,6 +26,7 @@ const TodoListItem = (props) => {
                 onClick={onToggleDone}>
                  {text}
              </div>
+            {itemButton(onDeleted,"btn-danger","fa fa-trash-h")}
             <i className="menu-popup fas fa-ellipsis-h fa-lg"/>
         </span>
     );
@@ -34,7 +35,7 @@ const TodoListItem = (props) => {
 const itemButton = (onClick, btnType, icon) => {
     return(
         <button type="button"
-                className={`btn ${btnType} btn-sm float-right`}
+                className={`btn ${btnType}  btn-sm float-right`}
                 onClick={onClick}>
             <i className={`${icon}`}/>
         </button>

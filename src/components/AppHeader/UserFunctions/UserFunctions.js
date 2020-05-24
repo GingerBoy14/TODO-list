@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./UserFunctions.css"
 import { CSSTransition } from 'react-transition-group';
+import {Link} from "react-router-dom";
 
 export default class UserFunctions extends Component{
 
@@ -21,7 +22,10 @@ export default class UserFunctions extends Component{
                         timeout={300}
                         classNames="button"
                         unmountOnExit>
-                        <i className="button far fa-times-circle fa-2x"/>
+                        <Link to="/login" className="button">
+                            <i className="fas fa-sign-out-alt fa-sm"/>
+                            Log out
+                        </Link>
                     </CSSTransition>
                 </div>
         );

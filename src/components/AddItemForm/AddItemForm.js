@@ -1,40 +1,34 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 
 import "./AddItemForm.css"
 
-export default class AddItemForm extends Component{
-
-    state = {
-        text: ''
+const AddItemForm = ({ onItemAdd }) =>{
+    const [text, setText] = useState('');
+    const onTextChange = (e) => {
+        setText( e.target.value);
     };
-    onTextChange = (e) => {
-        this.setState({
-            text: e.target.value
-        })
-    };
-    onSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
-        if(this.state.text){
-            this.props.onItemAdd(this.state.text);
-            this.setState({
-                text: ''
-            });
+        if(text){
+            onItemAdd(text);
+            setText('');
         }
     };
-
-    render() {
         return(
             <form className="item-add-form"
-                  onSubmit={this.onSubmit}>
+                  onSubmit={onSubmit}>
                 <input type="text"
                        className="search-input form-control"
                        placeholder="What needs to be done"
-                       onChange={this.onTextChange}
-                       value={this.state.text}/>
+                       onChange={onTextChange}
+                       value={text}/>
                 <button type="button"
-                        className="add-btn btn btn-outline-primary"
-                        onClick={this.onSubmit}>Add Item</button>
+                        className="submit-btn btn"
+                        onClick={onSubmit}>
+                    Add Item
+                </button>
             </form>
         );
     };
-}
+
+export default AddItemForm;

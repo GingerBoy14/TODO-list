@@ -1,13 +1,12 @@
 import React, {Component} from "react";
 
-import AppHeader from "../AppHeader";
+import AppHeader from "../../components/AppHeader";
 
-import TodoList from "../TodoList";
-import AddItemForm from "../AddItemForm";
+import TodoList from "../../components/TodoList";
+import AddItemForm from "../../components/AddItemForm";
+import Search from "../../components/Search";
+import Loading from "../../components/Loading";
 
-import Search from "../Search";
-import Form from "../Form";
-import Loading from "../Loading";
 const TodoApp = () => {
     return class extends Component{
 
@@ -95,8 +94,7 @@ const TodoApp = () => {
             const todoCount = todoData.length - doneCount;
 
             return(
-                <div className="todo-app container">
-
+                <React.Fragment>
                     <AppHeader
                         toDo={todoCount}
                         done={doneCount}/>
@@ -106,7 +104,6 @@ const TodoApp = () => {
                         displayData={this.searchResult}/>
 
                     <TodoList
-
                         todoItem = {visibleItems}
                         onDeleted={this.deleteItem}
                         onToggleDone={this.onToggleDone}
@@ -114,9 +111,9 @@ const TodoApp = () => {
 
                     <AddItemForm
                         onItemAdd = {this.addItem}/>
-                    <Form/>
+
                     <Loading/>
-                </div>
+                </React.Fragment>
             );
         };
     }
