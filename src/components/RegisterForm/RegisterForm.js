@@ -1,15 +1,16 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import "./RegisterForm.css";
 
-const RegisterForm = ({ history, animation}) =>{
+const RegisterForm = ({ history }) =>{
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log("ok");
         history.push("/todoApp")
     };
     return(
-        <div className="container">
-            <form style={animation} onSubmit={handleSubmit}>
+        <>
+            <form  onSubmit={handleSubmit}>
 
                 <div className="form-group">
                     <label htmlFor="InputUsername">Username</label>
@@ -45,7 +46,7 @@ const RegisterForm = ({ history, animation}) =>{
                     Submit
                 </button>
             </form>
-        </div>
+        </>
     );
 };
 export default withRouter(RegisterForm);

@@ -9,6 +9,33 @@
     flex-grow: 1;
     font-weight: 500;
 }
+/*.app-header .app-bar h1 .left-out .left{*/
+/*    background-color: #17a2b8;*/
+/*    padding: .24rem 1rem;*/
+/*    border-top-right-radius: 20px;*/
+/*    border-top-left-radius: 20px;*/
+/*    border-bottom-left-radius: 20px;*/
+/*}*/
+/*.app-header .app-bar h1 .left-out{*/
+/*    background-color: #808080;*/
+/*    border-top-left-radius: 20px;*/
+/*    border-bottom-left-radius: 20px;*/
+/*    height: 100%;*/
+/*}*/
+/*.app-header .app-bar h1 .right-out .right{*/
+/*    background-color: #808080;*/
+/*    padding:.24rem 1rem;*/
+/*    border-bottom-left-radius: 20px;*/
+/*    border-top-right-radius: 20px;*/
+/*    border-bottom-right-radius: 20px;*/
+/*    height: 100%;*/
+/*}*/
+/*.app-header .app-bar h1 .right-out{*/
+/*    background-color: #17a2b8;*/
+/*    border-top-right-radius: 20px;*/
+/*    border-bottom-right-radius: 20px;*/
+
+/*}*/
 .app-header .app-bar h2{
     display: flex;
     justify-content: flex-end;

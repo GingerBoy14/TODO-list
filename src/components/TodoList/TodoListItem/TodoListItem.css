@@ -3,25 +3,28 @@
 }
 
 .menu-popup{
+    color: #17a2b8;
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-left: .25rem;
-    transition: color .25s ease-in-out;
+    padding: 0 .7rem;
+    margin-left: .5rem;
 }
 .menu-popup:hover{
-    color: #17a2b8;
+    color: #fff;
 }
 .todo-list-item-text{
     font-size: 1.25rem;
     line-height: 35px;
-    cursor: pointer;
     user-select: none;
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     align-items: center;
+}
+.todo-list-item-text span{
+    cursor: pointer;
 }
 .todo-list-item.done .todo-list-item-text{
     text-decoration: line-through;

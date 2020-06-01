@@ -1,0 +1,124 @@
+.todo-list-item .drop-down-menu{
+    display: flex;
+    align-items: center;
+    margin:0 .3rem;
+    position: relative;
+}
+.todo-list-item .drop-down-menu .icon{
+    transition: color .2s ease-in-out;
+}
+.todo-list-item .drop-down-menu .icon:hover{
+    cursor: pointer;
+    color: #17a2b8;
+}
+
+.todo-list-item .drop-down-menu .dropdown{
+    list-style: none;
+    padding: .3rem 0;
+    background-color: #fff;
+    border-radius: .25rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
+    0 .7rem 1rem rgba(0, 0, 0, 0.22);
+    position: absolute;
+    right: -40%;
+    z-index: 100;
+    top: 110%;
+}
+
+
+.todo-list-item .drop-down-menu .dropdown:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 14%;
+    border-width: 0 .7rem .7rem .7rem;
+    border-style: solid;
+    border-color: #fff transparent;
+    filter: drop-shadow(0 -.1rem .05rem rgba(0, 0, 0, 0.07));
+}
+
+
+.todo-list-item .drop-down-menu .dropdown .menu-item{
+    padding: .5rem 1rem;
+    display: flex;
+    font-size: small;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item:hover{
+    cursor: pointer;
+}
+
+
+
+.todo-list-item .drop-down-menu .dropdown .menu-item.pin{
+    transition: background-color .2s ease-in-out;
+    color: #17a2b8;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.pin:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f08d";
+    padding-right: .2rem;
+    transform: rotate(-45deg);
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.pin:hover{
+    background-color: rgba(23,223,245,0.2);
+}
+
+
+
+
+.todo-list-item .drop-down-menu .dropdown .menu-item.important{
+    transition: background-color .2s ease-in-out;
+    color: #17a2b8;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.important:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f12a";
+    padding-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.important:hover{
+    background-color: rgba(23,223,245,0.2);
+}
+
+
+
+.todo-list-item .drop-down-menu .dropdown .menu-item.delete{
+    transition: background-color .2s ease-in-out;
+    color: red;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.delete:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f1f8";
+    padding-right: .5rem;
+}
+.todo-list-item .drop-down-menu .dropdown .menu-item.delete:hover{
+    background-color: rgba(255,0,0,0.2);
+}
+
+
+
+/* animation for dropdown menu*/
+.todo-list-item .drop-down-menu  .dropdown-enter{
+    transform-origin: 80% 0;
+    opacity: 0;
+    transform: scale(0) translateY(-25%);
+}
+.todo-list-item .drop-down-menu  .dropdown-enter-active{
+    opacity: 1;
+    transform: scale(1) translateX(0) ;
+    transition: all .25s ease-in;
+}
+.todo-list-item .drop-down-menu  .dropdown-exit{
+    opacity: 1;
+    transform-origin:  80% 0;
+    transform: scale(1)  translateX(0);
+}
+.todo-list-item .drop-down-menu .dropdown-exit-active{
+    opacity: 0;
+    transform: scale(0)  translateY(-50%);
+    transition: all .25s ease-out;
+}

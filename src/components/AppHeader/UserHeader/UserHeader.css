@@ -2,8 +2,8 @@
     display: flex;
     justify-content:space-between;
     align-items: flex-end;
-    height: 32px;
-    margin-bottom: 0.5rem;
+    height: 25px;
+    margin: 0.5rem 0;
 }
 .app-header .user-bar .email{
     font-size: .95rem;
@@ -15,31 +15,42 @@
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
     content: "\f105";
+    padding-right: .2rem;
 }
 
 .app-header .user-bar .button-enter {
     opacity: 0;
+    transform: translateY(10%);
 }
 
 .app-header .user-bar .button-enter.button-enter-active {
     opacity: 1;
-    transition: opacity .3s ease-in;
+    transform: translateY(0);
+    transition: all .25s ease-in;
 }
 
 .app-header .user-bar .button-exit {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .app-header .user-bar .button-exit.button-exit-active {
     opacity: 0;
-    transition: opacity .3s ease-out;
+    transform: translateY(10%);
+    transition: all .25s ease-out;
 }
 
 
 .app-header .user-bar .button{
     text-decoration: none;
     color: #808080;
-    transition: color .15s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+.app-header .user-bar .button:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f2f5";
+    padding-right: .2rem;
 }
 .app-header .user-bar .button:hover{
     cursor: pointer;

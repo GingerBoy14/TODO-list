@@ -1,15 +1,15 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "./LoginForm.css"
 
-const LoginForm = ({ history, animation}) =>{
+const LoginForm = ({ history }) =>{
     const handleSubmit = (event) =>{
         event.preventDefault();
         history.push("/todoApp");
-        console.log("ok");
     };
     return(
-        <div className="container">
-            <form style={animation} onSubmit={handleSubmit}>
+        <>
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="logEmailInput">Email address</label>
                     <input type="email"
@@ -35,7 +35,7 @@ const LoginForm = ({ history, animation}) =>{
                     Submit
                 </button>
             </form>
-        </div>
+        </>
     );
 };
 

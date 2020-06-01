@@ -1,5 +1,7 @@
 import React from "react";
 import "./TodoListItem.css"
+import "../../DropDownMenu"
+import DropDownMenu from "../../DropDownMenu";
 
 const TodoListItem = (props) => {
 
@@ -21,24 +23,13 @@ const TodoListItem = (props) => {
     return (
         <span className={classNames}>
 
-            <div
-                className="todo-list-item-text"
-                onClick={onToggleDone}>
-                 {text}
+            <div className="todo-list-item-text">
+                 <span onClick={onToggleDone}>{text}</span>
              </div>
-            {itemButton(onDeleted,"btn-danger","fa fa-trash-h")}
-            <i className="menu-popup fas fa-ellipsis-h fa-lg"/>
+            <DropDownMenu
+                onDeleted={onDeleted}
+                onToggleImportant={onToggleImportant}/>
         </span>
     );
-};
-
-const itemButton = (onClick, btnType, icon) => {
-    return(
-        <button type="button"
-                className={`btn ${btnType}  btn-sm float-right`}
-                onClick={onClick}>
-            <i className={`${icon}`}/>
-        </button>
-    )
 };
 export default TodoListItem;

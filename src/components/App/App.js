@@ -1,21 +1,20 @@
 import React from "react";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
-import {Container} from "react-bootstrap";
 
 import "./App.css"
 import TodoApp from "../../routes/TodoApp";
 import Form from "../../routes/Form";
 const App = () =>{
         return(
-            <Container className="todo-app">
+            <div className="todo-app container">
                 <Router>
                     <Switch>
                         <Route path="/todoApp" component={TodoApp()}/>
-                        <Route path="/login" component={Form}/>
-                        <Redirect to="/login"/>
+                        <Route path="/userForm/" component={Form}/>
+                        <Redirect to="/userForm/"/>
                     </Switch>
                 </Router>
-            </Container>
+            </div>
         );
     };
 
