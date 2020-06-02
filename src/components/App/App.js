@@ -1,22 +1,34 @@
 import React from "react";
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import { Redirect, Route, Switch, withRouter } from "react-router-dom";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
-import "./App.css"
 import TodoApp from "../../routes/TodoApp";
 import Form from "../../routes/Form";
-const App = () =>{
-        return(
-            <div className="todo-app container">
-                <Router>
-                    <Switch>
-                        <Route path="/todoApp" component={TodoApp()}/>
-                        <Route path="/userForm/" component={Form}/>
-                        <Redirect to="/userForm/"/>
-                    </Switch>
-                </Router>
-            </div>
-        );
-    };
 
-export default App;
+import "./App.css"
+
+const App = ({ location }) =>{
+    const currentKey = location.pathname.split("/")[1] || "/";
+
+    return(
+        <div className="todo-app container">
+            <SwitchTransition>
+                <CSSTransition
+                    key={currentKey}
+                    timeout={300}
+                    classNames="app">
+                        <Switch location={location}>
+                            <Route path="/todoApp">
+                                <TodoApp/>
+                            </Route>
+                            <Route path="/user/" component={Form}/>
+                            <Redirect to="/user/"/>
+                        </Switch>
+                </CSSTransition>
+            </SwitchTransition>
+        </div>
+    );
+};
+
+export default withRouter(App);
 

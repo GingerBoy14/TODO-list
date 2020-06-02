@@ -4,19 +4,20 @@ import { withRouter } from "react-router-dom";
 import "./Tabs.css";
 
 const Tabs = ({ history, location }) =>{
-    const [ activeTab, setActiveTab ] = useState('login')
+    const [ activeTab, setActiveTab ] = useState('login');
+
+    //set appropriate content title
     useEffect(()=>{
-        if(location.pathname === '/userForm/login' || location.pathname === '/userForm/')
+        if(location.pathname === '/user/login' || location.pathname === '/user/')
             setActiveTab('login');
         else
             setActiveTab('register');
-    },[]);
+    },[location.pathname]);
+
     const handleChangeTab = (tabName) =>{
         setActiveTab(tabName);
-        if(location.pathname !== `/userForm/${tabName}`)
-            history.push(`${tabName}`);
+        history.push(`${tabName}`);
     };
-
 
     return(
         <nav>

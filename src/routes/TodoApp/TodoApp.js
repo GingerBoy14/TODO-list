@@ -7,8 +7,7 @@ import AddItemForm from "../../components/AddItemForm";
 import Search from "../../components/Search";
 import Loading from "../../components/Loading";
 
-const TodoApp = () => {
-    return class extends Component{
+export default class TodoApp extends Component{
 
         lastId = 0;
 
@@ -94,7 +93,7 @@ const TodoApp = () => {
             const todoCount = todoData.length - doneCount;
 
             return(
-                <React.Fragment>
+                <div>
                     <AppHeader
                         toDo={todoCount}
                         done={doneCount}/>
@@ -113,11 +112,8 @@ const TodoApp = () => {
                         onItemAdd = {this.addItem}/>
 
                     <Loading/>
-                </React.Fragment>
+                </div>
             );
         };
-    }
-};
-
-export default TodoApp;
+    };
 

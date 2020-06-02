@@ -21,3 +21,29 @@
 .break-point{
     margin-top: 0.2rem;
 }
+
+
+
+.list-item-exit,
+.list-item-enter{
+    transform-origin: 0;
+}
+
+.list-item-enter {
+    opacity: 0;
+    transform: rotateY(-90deg);
+}
+.list-item-exit {
+    opacity: 1;
+}
+.list-item-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all 330ms ease-out;
+}
+
+.list-item-exit-active {
+    opacity: 0;
+    transform: rotateY(-90deg);
+    transition: all 330ms ease-in;
+}

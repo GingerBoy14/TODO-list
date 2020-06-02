@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {Route, Switch, Redirect, withRouter} from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 
 import "./Form.css"
 
@@ -12,18 +12,24 @@ const Form = ({ match, location }) =>{
     const [ menuHeight, setMenuHeight ] = useState(null);
     const [ activeTab, setActiveTab ] = useState(true);
     const dropdownRef = useRef(null);
-    const animationClassNames =
-        activeTab ? "slide-to-login" : "slide-to-reg";
 
+    //change the content
     useEffect(() => {
-        setActiveTab(!activeTab);
+        setActiveTab(state => !state);
     }, [location.pathname]);
+
+    //calculate the height of content div when it change
     const calcHeight = (el) =>{
         setMenuHeight(el.offsetHeight);
     };
+
+    const currentKey = location.pathname.split("/user/")[1];
+    const animationClassNames =
+        activeTab ? "slide-to-login" : "slide-to-reg";
+
     return(
         <div className="login-register-form">
-            <Nav activeTab={activeTab}/>
+            <Nav/>
             <TransitionGroup
                 className="transition-div"
                 style={{ height: menuHeight }}
@@ -34,7 +40,7 @@ const Form = ({ match, location }) =>{
                     })
                 }>
                 <CSSTransition
-                    key={location.key}
+                    key={currentKey}
                     timeout={330}
                     classNames={animationClassNames}
                     onEnter={calcHeight}>
