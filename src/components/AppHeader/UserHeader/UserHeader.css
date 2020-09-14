@@ -44,7 +44,6 @@
 .app-header .user-bar .button{
     text-decoration: none;
     color: #808080;
-    transition: color .25s ease-in-out;
 }
 .app-header .user-bar .button:before{
     font-family: "Font Awesome 5 Free";

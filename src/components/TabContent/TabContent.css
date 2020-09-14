@@ -1,0 +1,63 @@
+
+
+.login-register-form > div form{
+    padding: 0 .2rem;
+}
+
+.transition-div {
+    overflow: hidden;
+    position: relative;
+    margin: .75rem .4rem 1rem;
+}
+
+.submit-btn{
+    transition: all .25s ease-in-out;
+    background-color: rgba(215,215,215,0.6);
+
+}
+.submit-btn:hover{
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.form-control:focus{
+    border-color:rgba(23,151,173,0.6);
+    box-shadow:0 0 0 .2rem rgba(23,162,184,0.3);
+}
+
+
+
+/* CSSTransition Animation for Form change content*/
+.slide-to-login-enter,
+.slide-to-login-exit,
+.slide-to-reg-enter,
+.slide-to-reg-exit {
+    transition: transform 330ms cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+
+.slide-to-login-enter {
+    transform: translateX(100%);
+}
+.slide-to-reg-enter {
+    transform: translateX(-100%);
+}
+.slide-to-login-enter-active,
+.slide-to-reg-enter-active {
+    transform: translateX(0);
+}
+
+
+.slide-to-login-exit,
+.slide-to-reg-exit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(0%);
+}
+.slide-to-login-exit-active {
+    transform: translateX(100%);
+}
+.slide-to-reg-exit-active {
+    transform: translateX(-100%);
+}

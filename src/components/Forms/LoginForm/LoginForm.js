@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import "./LoginForm.css"
 
 const LoginForm = ({ history }) =>{
     const handleSubmit = (event) =>{
@@ -22,6 +21,7 @@ const LoginForm = ({ history }) =>{
                 </div>
                 <div className="form-group">
                     <label htmlFor="regInputPassword">Password</label>
+
                     <input type="password"
                            className="form-control"
                            id="regInputPassword"

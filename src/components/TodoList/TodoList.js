@@ -3,12 +3,12 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 import TodoListItem from "./TodoListItem";
 
-import './TodoList.css'
+import './TodoList.scss'
 /*
 * Todo list should scroll only when there are new item in it
 *
 * */
-const TodoList = ({todoItem, onDeleted, onToggleImportant, onToggleDone}) =>{
+const TodoList = ({todoItem, onDeleted, onToggleImportant, onToggleDone, handlePinToTop}) =>{
     const List = todoItem.map((item) =>{
             const { id, ...itemProps} = item;
             return(
@@ -20,14 +20,15 @@ const TodoList = ({todoItem, onDeleted, onToggleImportant, onToggleDone}) =>{
                         <TodoListItem {...itemProps}
                                       onDeleted={()=>{onDeleted(id);}}
                                       onToggleImportant={()=>{onToggleImportant(id);}}
-                                      onToggleDone={()=>{onToggleDone(id);}}/>
+                                      onToggleDone={()=>{onToggleDone(id);}}
+                                      handlePinToTop={()=>{handlePinToTop(id);}}/>
                     </li>
                 </CSSTransition>
             )
         }
 
     );
-    const hidden = todoItem.length>9 ? `todo-list-hidden` : null;
+    const hidden = todoItem.length>9 ? `todo-list-hidden` : '';
 
     return(
 

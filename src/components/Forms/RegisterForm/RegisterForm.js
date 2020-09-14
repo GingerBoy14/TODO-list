@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { withRouter } from "react-router-dom";
-import "./RegisterForm.css";
+
+import "./RegisterForm.scss";
 
 const RegisterForm = ({ history }) =>{
+    const [showPassword, setShowPassword] = useState(false);
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log("ok");
@@ -32,10 +34,15 @@ const RegisterForm = ({ history }) =>{
                 </div>
                 <div className="form-group">
                     <label htmlFor="regInputPassword">Password</label>
-                    <input type="password"
-                           className="form-control"
-                           id="regInputPassword"
-                           placeholder="Password"/>
+                    <div className="password-input-wrapper">
+                        <input type={showPassword?'text':'password'}
+                               className="form-control"
+                               id="regInputPassword"
+                               placeholder="Password"/>
+                        <i className={`show-password-icon far fa-eye ${showPassword?'active':'inactive'}`}
+                           onClick={()=>setShowPassword(!showPassword)}
+                        />
+                    </div>
                     <small id="emailHelp" className="form-text text-muted">
                         No one should know your password.
                     </small>

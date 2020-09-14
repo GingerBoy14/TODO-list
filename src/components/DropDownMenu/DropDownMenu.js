@@ -25,9 +25,12 @@ const DropDownMenu = (props) =>{
 };
 
 
-const Menu = ({ onToggleImportant, onDeleted, handleMouseLeave}) =>(
+const Menu = ({ onToggleImportant, onDeleted, handleMouseLeave, handlePinToTop}) =>(
     <ul className="dropdown"  onMouseLeave={()=>handleMouseLeave()}>
-        <li className="menu-item pin">Pin to top</li>
+        <li className="menu-item pin"
+            onClick={handlePinToTop}>
+            Pin to top
+        </li>
         <li className="menu-item important"
             onClick={onToggleImportant}>
             Mark important

@@ -5,7 +5,6 @@ import AppHeader from "../../components/AppHeader";
 import TodoList from "../../components/TodoList";
 import AddItemForm from "../../components/AddItemForm";
 import Search from "../../components/Search";
-import Loading from "../../components/Loading";
 
 export default class TodoApp extends Component{
 
@@ -22,7 +21,8 @@ export default class TodoApp extends Component{
                 id:this.lastId++,
                 text,
                 important:false,
-                done:false
+                done:false,
+                pinToTop: false
             };
         };
 
@@ -82,6 +82,14 @@ export default class TodoApp extends Component{
             });
         };
 
+        handlePinToTop = (id) =>{
+            this.setState(({ todoData })=>{
+                return{
+                    todoData: this.toggleProps(todoData,id,'pinToTop')
+                };
+            });
+        };
+
         searchResult = (visibleItems) => {
             this.setState({visibleItems});
         };
@@ -106,12 +114,11 @@ export default class TodoApp extends Component{
                         todoItem = {visibleItems}
                         onDeleted={this.deleteItem}
                         onToggleDone={this.onToggleDone}
-                        onToggleImportant={this.onToggleImportant}/>
+                        onToggleImportant={this.onToggleImportant}
+                        handlePinToTop={this.handlePinToTop}/>
 
                     <AddItemForm
                         onItemAdd = {this.addItem}/>
-
-                    <Loading/>
                 </div>
             );
         };

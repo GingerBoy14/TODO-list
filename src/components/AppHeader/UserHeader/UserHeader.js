@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
  const UserHeader = () =>{
 
      const [ logout, setLogout ] = useState(false);
-
         return(
                 <div className="user-bar">
                     <span className="email"

@@ -1,0 +1,60 @@
+.password-input-wrapper{
+    position: relative;
+    .show-password-icon{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: .75rem;
+        display: flex;
+        align-content: center;
+        align-items: center;
+
+        &.active{
+            &::before{
+                animation: eye-clip .3s ease;
+                color: #17a2b8;
+            }
+        }
+        &.inactive{
+            &::before{
+                animation: eye-clip2 .3s ease;
+            }
+        }
+        &::before{
+            cursor: pointer;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            align-content: center;
+            align-items: center;
+            color: #495057;
+
+        }
+
+    }
+}
+
+@keyframes eye-clip {
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}@keyframes eye-clip2 {
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}

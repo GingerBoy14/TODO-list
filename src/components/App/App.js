@@ -9,7 +9,6 @@ import "./App.css"
 
 const App = ({ location }) =>{
     const currentKey = location.pathname.split("/")[1] || "/";
-
     return(
         <div className="todo-app container">
             <SwitchTransition>
