@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import Nav from "../../components/Tabs"
 import TabContent from "../../components/TabContent";
 
-import "./Form.css"
+import "./Form.scss"
 
 const Form = ({ location }) =>{
     const [ activeTab, setActiveTab ] = useState(true);

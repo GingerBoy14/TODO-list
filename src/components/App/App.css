@@ -6,7 +6,7 @@
 /*TODO dark theme support*/
 /* Set dark mode styles */
 @media (prefers-color-scheme: dark) {
-    body {color: #333; background: #fff;}
+    body {color: rgba(126,168,188,0.55); background: rgba(18,28,30,1);}
 }
 body{
 font-family: 'Comfortaa', cursive;

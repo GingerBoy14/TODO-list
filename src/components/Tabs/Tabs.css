@@ -37,3 +37,12 @@
     background:  #fff;
 }
 
+@media (prefers-color-scheme: dark) {
+    .nav-pills .nav-link.active{
+        color: rgba(161,229,235,0.55);
+        background:  rgba(15,20,23,0.41);
+    }
+    .login-register-form nav .slider .indicator{
+        background: rgba(161,229,235,0.55);
+    }
+}

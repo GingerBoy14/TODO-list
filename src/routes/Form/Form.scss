@@ -1,0 +1,49 @@
+@import "../../utils/scss/mixins";
+.login-register-form{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
+    0 .7rem 1rem rgba(0, 0, 0, 0.22);
+    border-radius: .25rem;
+    padding: .4rem .75rem;
+
+    label{
+        font-weight: 500;
+    }
+    input{
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:active{
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:focus{
+            -webkit-box-shadow: 0 0 0 .2rem rgba(23,162,184,0.3) !important;
+        }
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .login-register-form{
+        background-color: #1B2527;
+    }
+    .login-register-form input{
+        @include disable-border-outline;
+        background-color: #26353c;
+        &:focus{
+            background-color: #26353c;
+            box-shadow: 0 0 0 .2rem rgba(126,168,188,0.55);
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:active{
+            -webkit-text-fill-color: #5b6c73;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:focus{
+            -webkit-box-shadow: 0 0 0 .2rem rgba(126,168,188,0.55) !important;
+        }
+
+    }
+}

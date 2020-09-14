@@ -21,7 +21,6 @@ const LoginForm = ({ history }) =>{
                 </div>
                 <div className="form-group">
                     <label htmlFor="regInputPassword">Password</label>
-
                     <input type="password"
                            className="form-control"
                            id="regInputPassword"
