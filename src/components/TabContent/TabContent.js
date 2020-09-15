@@ -3,12 +3,14 @@ import {Redirect, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 import withAnimateHeight from "../HOC";
-
-import LoginForm from "../Forms/LoginForm/LoginForm";
-import RegisterForm from "../Forms/RegisterForm/RegisterForm";
-
-import "./TabContent.css"
 import {compose} from "../../utils";
+
+import {
+    RegisterForm,
+    LoginForm
+} from "../Forms";
+
+import "./TabContent.scss"
 
 const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
 

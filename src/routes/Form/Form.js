@@ -21,8 +21,7 @@ const Form = ({ location }) =>{
         <div className="login-register-form-wrapper">
             <div className="login-register-form">
                 <Nav/>
-                <TabContent
-                    animationClassNames={animationClassNames}/>
+                <TabContent animationClassNames={animationClassNames}/>
             </div>
         </div>
     );

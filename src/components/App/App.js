@@ -5,7 +5,7 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import TodoApp from "../../routes/TodoApp";
 import Form from "../../routes/Form";
 
-import "./App.css"
+import "./App.scss"
 import {changeColorScheme, detectColorScheme} from "../../utils";
 import ThemeToggle from "../ThemeToggle";
 
@@ -29,26 +29,25 @@ const App = ({ location }) =>{
     }
     const currentKey = location.pathname.split("/")[1] || "/";
     return(
-
         <SwitchTransition>
             <CSSTransition
                 key={currentKey}
                 timeout={300}
                 classNames="app">
-                <div className="todo-app container">
+                <div className="todo-app-wrapper">
                     <ThemeToggle theme={theme} changeTheme={changeTheme}/>
-                    <Switch location={location}>
-
-                        <Route path="/todoApp">
-                            <TodoApp/>
-                        </Route>
-                        <Route path="/user/" component={Form}/>
-                        <Redirect to="/user/"/>
-                    </Switch>
+                    <div className="todo-app container">
+                        <Switch location={location}>
+                            <Route path="/todoApp">
+                                <TodoApp/>
+                            </Route>
+                            <Route path="/user/" component={Form}/>
+                            <Redirect to="/user/"/>
+                        </Switch>
+                    </div>
                 </div>
             </CSSTransition>
         </SwitchTransition>
-
     );
 };
 

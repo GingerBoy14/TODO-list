@@ -1,56 +1,82 @@
 @import "../../utils/scss/mixins";
+@import "../../utils/scss/variables";
 .login-register-form-wrapper{
     height: 90%;
     display: flex;
     align-items: center;
     align-content: center;
 
-.login-register-form {
-    max-width: 450px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
-    0 .7rem 1rem rgba(0, 0, 0, 0.22);
-    border-radius: .25rem;
-    padding: .4rem .75rem;
+    .login-register-form {
+        max-width: 450px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
+        0 .7rem 1rem rgba(0, 0, 0, 0.22);
+        border-radius: .25rem;
+        padding: .4rem .75rem;
 
-    label {
-        font-weight: 500;
-    }
-
-    input {
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover,
-        &:-webkit-autofill:active {
-            transition: background-color 5000s ease-in-out 0s;
+        label {
+            font-weight: 500;
+        }
+        form{
+            padding: 0 .2rem;
+            .submit-btn{
+                transition: all .25s ease-in-out;
+                background-color: $LT-button-background;
+                &:hover{
+                    background-color: $LT-primary-color;
+                    color: #fff;
+                }
+            }
         }
 
-        &:-webkit-autofill:focus {
-            -webkit-box-shadow: 0 0 0 .2rem rgba(23, 162, 184, 0.3) !important;
+        input {
+            &:focus{
+                border-color:rgba($LT-primary-color, .5);
+                box-shadow: $LT-input-box-shadow;
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:active {
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+            &:-webkit-autofill:focus {
+                -webkit-box-shadow: $LT-input-box-shadow !important;
+            }
         }
     }
-}
 }
 [data-theme='dark'] .login-register-form-wrapper{
     .login-register-form{
         background-color: #1B2527;
+        form{
+            .submit-btn{
+                color: $DT-lighter-text-color;
+                background-color: $DT-button-background;
+                &:hover{
+                    background-color: $DT-primary-color;
+                    color: #fff;
+                }
+            }
+        }
         input{
             @include disable-border-outline;
             background-color: #26353c;
-            color: rgba(180,214,228,0.79) !important;
+            color: $DT-lighter-text-color !important;
             &:focus{
                 background-color: #26353c;
-                box-shadow: 0 0 0 .2rem rgba(126,168,188,0.55);
+                box-shadow: $DT-input-box-shadow;
             }
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:active{
-                -webkit-text-fill-color: rgba(180,214,228,0.79);
+                -webkit-text-fill-color: $DT-lighter-text-color;
                 transition: background-color 5000s ease-in-out 0s;
             }
             &:-webkit-autofill:focus{
-                -webkit-box-shadow: 0 0 0 .2rem rgba(126,168,188,0.55) !important;
+                -webkit-box-shadow: $DT-input-box-shadow !important;
             }
 
         }

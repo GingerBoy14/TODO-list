@@ -5,11 +5,9 @@ import "./ThemeToggle.scss";
 const ThemeToggle = ({theme,changeTheme}) => {
     const [checked, setChecked] = useState(theme==="light");
     useEffect(()=>{
-        console.log("toggleRerender")
         setChecked(theme==="light")
     },[theme,setChecked])
     const handleChangeTheme = () =>{
-
         changeTheme(checked);
         setChecked(!checked);
     }
@@ -17,9 +15,9 @@ const ThemeToggle = ({theme,changeTheme}) => {
     return(
         <div className="theme-toggle-wrapper">
             <div className="theme-switch-box">
-                <span>Theme</span>
+                <label htmlFor="theme-toggle" className="theme-switch-box-title">Theme</label>
                 <div className="theme-toggle-switch">
-                    <input type="checkbox" className="theme-switch" onChange={handleChangeTheme} checked={checked}/>
+                    <input type="checkbox" className="theme-switch" id="theme-toggle" onChange={handleChangeTheme} checked={checked}/>
                     <svg className="theme-checkbox" xmlns="http://www.w3.org/2000/svg" style={{isolation: 'isolate'}}
                          viewBox="0 0 168 80">
                         <path className="outer-ring"

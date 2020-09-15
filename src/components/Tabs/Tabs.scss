@@ -1,0 +1,79 @@
+@import "../../utils/scss/variables";
+
+$LT-nav-link-color: #454545;
+$LT-nav-link-hover-color: #7D7D7D;
+
+$DT-nav-link-color: $LT-nav-link-hover-color;
+$DT-nav-link-hover-color: #a5a5a5;
+
+.login-register-form >nav{
+    .nav-pills{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        .nav-item {
+            width: 50%;
+            .nav-link {
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: .35rem 0;
+                height: 100%;
+                text-align: center;
+                color: $LT-nav-link-color;
+                transition: color .25s ease-in-out;
+                text-transform: capitalize;
+
+                &.active {
+                    color: $LT-primary-color;
+                    background: transparent;
+                }
+
+                &:not(.active):hover {
+                    color: $LT-nav-link-hover-color;
+                }
+            }
+        }
+    }
+    .slider{
+        position: relative;
+        width: 50%;
+        transition: all $change-form-transition;
+
+        .indicator{
+            position: relative;
+            width: 15%;
+            max-width: 100%;
+            margin: 0 auto;
+            height: .2rem;
+            background: $LT-primary-color;
+            border-radius: .25rem;
+        }
+    }
+}
+
+[data-theme='dark']{
+    .login-register-form-wrapper .login-register-form >nav{
+        .nav-pills{
+            .nav-link{
+                color: $DT-nav-link-color;
+                &.active{
+                    color: $DT-primary-color;
+                }
+                &:not(.active):hover{
+                    color: $DT-nav-link-hover-color;
+                }
+            }
+        }
+        .slider{
+            .indicator{
+                background: $DT-primary-color;
+            }
+        }
+    }
+}
+
