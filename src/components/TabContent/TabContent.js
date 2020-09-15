@@ -8,6 +8,7 @@ import LoginForm from "../Forms/LoginForm/LoginForm";
 import RegisterForm from "../Forms/RegisterForm/RegisterForm";
 
 import "./TabContent.css"
+import {compose} from "../../utils";
 
 const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
 
@@ -36,5 +37,7 @@ const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
     );
 };
 
-export default withAnimateHeight("transition-div", 330)(
-                    withRouter(TabContent));
+export default compose(
+    withAnimateHeight("transition-div", 330),
+    withRouter
+)(TabContent)

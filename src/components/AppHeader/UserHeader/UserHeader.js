@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
                         timeout={275}
                         classNames="button"
                         unmountOnExit>
-                        <Link to="/login" className="button">Log out</Link>
+                        <Link to="/user" className="button">Log out</Link>
                     </CSSTransition>
                 </div>
         );

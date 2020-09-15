@@ -1,17 +1,15 @@
-import React, {useRef, useState} from "react";
-
-
-
+import React, {useEffect, useRef, useState} from "react";
 
 const withAnimateHeight = (styleClass = null, timeout) => (Wrapper) => (props) =>{
-    const [ menuHeight, setMenuHeight ] = useState(null);
     const dropdownRef = useRef(null);
+    useEffect(()=>setMenuHeight(dropdownRef.current.offsetHeight),[dropdownRef]);
+    const [ menuHeight, setMenuHeight ] = useState(null);
 
     //calculate the height of content div when it change
     const calcHeight = (el) =>{
         setMenuHeight(el.offsetHeight);
     };
-    return  (
+    return (
         <div
             className={styleClass}
             style={{

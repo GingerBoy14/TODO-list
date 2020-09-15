@@ -15,6 +15,9 @@
                 animation: eye-clip .3s ease;
                 color: #17a2b8;
             }
+            [data-theme='dark'] &::before{
+                color: rgba(161,229,235,0.55);
+            }
         }
         &.inactive{
             &::before{
@@ -31,7 +34,9 @@
             align-content: center;
             align-items: center;
             color: #495057;
-
+        }
+        [data-theme='dark']  &::before{
+            color: #6C757D;
         }
 
     }

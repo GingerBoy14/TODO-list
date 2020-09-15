@@ -18,10 +18,12 @@ const Form = ({ location }) =>{
         activeTab ? "slide-to-login" : "slide-to-reg";
 
     return(
-        <div className="login-register-form">
-            <Nav/>
-            <TabContent
-                animationClassNames={animationClassNames}/>
+        <div className="login-register-form-wrapper">
+            <div className="login-register-form">
+                <Nav/>
+                <TabContent
+                    animationClassNames={animationClassNames}/>
+            </div>
         </div>
     );
 };

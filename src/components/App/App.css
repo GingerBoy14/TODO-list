@@ -5,11 +5,18 @@
 
 /*TODO dark theme support*/
 /* Set dark mode styles */
-@media (prefers-color-scheme: dark) {
-    body {color: rgba(126,168,188,0.55); background: rgba(18,28,30,1);}
+html, body, #root, .todo-app{
+    height: 100%;
 }
+[data-theme='dark'] body{
+    color: rgba(126,168,188,0.6);
+    background: rgba(18,28,30,1);
+    transition: all .2s ease;
+}
+
 body{
 font-family: 'Comfortaa', cursive;
+
 }
 @media only screen and (min-width: 768px) {
     html {
@@ -37,7 +44,7 @@ font-family: 'Comfortaa', cursive;
 
 
 .todo-app{
-    margin-top: 2rem;
+    padding-top: 1rem;
 }
 
 
@@ -61,6 +68,22 @@ font-family: 'Comfortaa', cursive;
 .app-exit-active {
     opacity: 0;
     transform: scale(0);
+    transition: all 300ms;
+}
+
+
+.app-theme-toggle-enter {
+    opacity: 0;
+}
+.app-theme-toggle-enter-active {
+    opacity: 1;
+    transition: all 300ms;
+}
+.app-theme-toggle-exit {
+    opacity: 1;
+}
+.app-theme-toggle-exit-active {
+    opacity: 0;
     transition: all 300ms;
 }
 
