@@ -1,6 +1,9 @@
 $change-theme-transition-speed: .35s;
 $change-form-transition: 330ms cubic-bezier(0.38, 0.8, 0.32, 1.07);
+$box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
+0 .7rem 1rem rgba(0, 0, 0, 0.22);
 
+$dark-gray-color: #454545;
 //Light THEME vars
 $LT-primary-color: #17a2b8;
 $LT-button-background: rgba(215,215,215,0.6);
@@ -19,6 +22,7 @@ $DT-lighterTextColor:#B4D6E4;
 $DT-buttonBackground:#92CDD3;
 
 $DT-primary-background: #121C1E;
+$DT-secondary-background: #1B2527;
 $DT-primary-color: rgba($DT-primaryColor, 0.65);
 $DT-primary-text-color: rgba($DT-primaryTextColor,0.6);
 $DT-lighter-text-color: rgba($DT-lighterTextColor,0.79);

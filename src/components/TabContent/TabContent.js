@@ -14,8 +14,7 @@ import "./TabContent.scss"
 
 const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
 
-    const currentKey = location.pathname.split("/user/")[1];
-
+    const currentKey = location.pathname.split("/user/")[1]; // del /user/ from path
     return(
         <TransitionGroup
             childFactory={child =>

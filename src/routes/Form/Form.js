@@ -7,12 +7,11 @@ import TabContent from "../../components/TabContent";
 import "./Form.scss"
 
 const Form = ({ location }) =>{
-    const [ activeTab, setActiveTab ] = useState(true);
-
+    const [ activeTab, setActiveTab ] = useState(location.pathname.split("/user/")[1] === "login");
     //change the content
     useEffect(() => {
-        setActiveTab(state => !state);
-    }, [location.pathname]);
+        setActiveTab(!activeTab);
+    }, [location.pathname,setActiveTab]);
 
     const animationClassNames =
         activeTab ? "slide-to-login" : "slide-to-reg";

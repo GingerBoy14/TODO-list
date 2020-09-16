@@ -1,13 +1,21 @@
-.app-header .app-bar{
-    display: flex;
-    flex-direction: column;
-}
-.app-header .app-bar h1{
-    font-family: 'Ubuntu Mono', monospace;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    font-weight: 500;
+.app-header{
+    .app-bar{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-family: 'Ubuntu Mono', monospace;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            font-weight: 500;
+        }
+        h2{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.2rem;
+            color: grey;
+        }
+    }
 }
 /*.app-header .app-bar h1 .left-out .left{*/
 /*    background-color: #17a2b8;*/
@@ -36,11 +44,5 @@
 /*    border-bottom-right-radius: 20px;*/
 
 /*}*/
-.app-header .app-bar h2{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.2rem;
-    color: grey;
-}
 
 

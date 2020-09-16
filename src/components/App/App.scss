@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap');
 @import "../../utils/scss/variables";
+@import "../../utils/scss/mixins";
 
 html, body, #root, .todo-app-wrapper{
     height: 100%;
@@ -54,10 +55,58 @@ body{
 }
 
 
+.form-control {
+    &:focus{
+        border-color:rgba($LT-primary-color, .5);
+        box-shadow: $LT-input-box-shadow;
+    }
+}
+.submit-btn{
+    transition: all .25s ease-in-out;
+    background-color: $LT-button-background;
+    &:hover{
+        background-color: $LT-primary-color;
+        color: #fff;
+    }
+}
+[data-theme='dark']{
+    body{
+        color: $DT-primary-text-color;
+        background: $DT-primary-background;
+        transition: all $change-theme-transition-speed ease;
+    }
+    .form-control{
+        @include disable-border-outline;
+        background: #26353c;
+        color: $DT-lighter-text-color !important;
+        &:focus{
+            background-color: #26353c;
+            box-shadow: $DT-input-box-shadow;
+        }
+    }
 
+     .submit-btn{
+        color: $DT-lighter-text-color;
+        background-color: $DT-button-background;
+        &:hover{
+            background-color: $DT-primary-color;
+            color: #fff;
+        }
+    }
+    .btn-group > .btn{
+        font-weight: 600 !important;
+    }
+    .btn-info{
+        background-color:  $DT-primary-color;
+        border-color: $DT-primary-color;
+        color: $DT-primary-background;
 
-[data-theme='dark'] body{
-    color: $DT-primary-text-color;
-    background: $DT-primary-background;
-    transition: all $change-theme-transition-speed ease;
+        &:hover{
+            background-color: rgba($DT-primary-color,.8);
+            border-color: rgba($DT-primaryColor,.8);
+        }
+        &:focus{
+            box-shadow: $DT-input-box-shadow;
+        }
+    }
 }

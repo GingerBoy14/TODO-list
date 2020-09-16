@@ -38,9 +38,7 @@ const App = ({ location }) =>{
                     <ThemeToggle theme={theme} changeTheme={changeTheme}/>
                     <div className="todo-app container">
                         <Switch location={location}>
-                            <Route path="/todoApp">
-                                <TodoApp/>
-                            </Route>
+                            <Route path="/todoApp" component={TodoApp}/>
                             <Route path="/user/" component={Form}/>
                             <Redirect to="/user/"/>
                         </Switch>

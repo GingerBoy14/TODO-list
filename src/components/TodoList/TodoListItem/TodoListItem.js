@@ -2,7 +2,7 @@ import React from "react";
 
 import DropDownMenu from "../../DropDownMenu";
 
-import "./TodoListItem.css"
+import "./TodoListItem.scss"
 import {CSSTransition} from "react-transition-group";
 
 const TodoListItem = (props) => {

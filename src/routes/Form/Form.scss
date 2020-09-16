@@ -1,18 +1,17 @@
 @import "../../utils/scss/mixins";
 @import "../../utils/scss/variables";
+
 .login-register-form-wrapper{
     height: 90%;
     display: flex;
     align-items: center;
-    align-content: center;
 
     .login-register-form {
         max-width: 450px;
         display: flex;
         width: 100%;
         flex-direction: column;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25),
-        0 .7rem 1rem rgba(0, 0, 0, 0.22);
+        box-shadow: $box-shadow;
         border-radius: .25rem;
         padding: .4rem .75rem;
 
@@ -21,14 +20,6 @@
         }
         form{
             padding: 0 .2rem;
-            .submit-btn{
-                transition: all .25s ease-in-out;
-                background-color: $LT-button-background;
-                &:hover{
-                    background-color: $LT-primary-color;
-                    color: #fff;
-                }
-            }
         }
 
         input {
@@ -50,7 +41,7 @@
 }
 [data-theme='dark'] .login-register-form-wrapper{
     .login-register-form{
-        background-color: #1B2527;
+        background-color: $DT-secondary-background;
         form{
             .submit-btn{
                 color: $DT-lighter-text-color;
@@ -63,7 +54,7 @@
         }
         input{
             @include disable-border-outline;
-            background-color: #26353c;
+            background: #26353c;
             color: $DT-lighter-text-color !important;
             &:focus{
                 background-color: #26353c;

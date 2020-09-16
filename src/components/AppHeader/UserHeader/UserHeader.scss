@@ -1,3 +1,6 @@
+@import "../../../utils/scss/variables";
+
+$text-color: #808080;
 .app-header{
     .user-bar{
         display: flex;
@@ -8,7 +11,7 @@
         .email{
             font-size: .95rem;
             font-weight: 300;
-            color: grey;
+            color: $text-color;
             cursor: pointer;
             &::before{
                 font-family: "Font Awesome 5 Free";
@@ -19,11 +22,10 @@
         }
         .button{
             text-decoration: none;
-            color: #808080;
+            color: $text-color;
             transition: all .2s ease;
             &:hover{
                 cursor: pointer;
-                background-color: #fff;
                 color: red;
             }
             &::before{
@@ -50,6 +52,18 @@
                 transform: translateY(10%);
                 transition: all .25s ease-out;
             }
+        }
+    }
+}
+
+
+[data-theme='dark']{
+    .app-header .user-bar {
+        .email, .button {
+            color: rgba($DT-primaryTextColor, .95);
+        }
+        .button:hover{
+            color: red;
         }
     }
 }

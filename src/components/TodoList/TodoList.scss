@@ -1,4 +1,25 @@
+@import "../../utils/scss/variables";
 
+
+[data-theme='dark']{
+  .item-list .todo-list{
+    .list-group-item{
+      background-color: $DT-secondary-background;
+      color: $DT-lighter-text-color;
+    }
+    &::-webkit-scrollbar-track{
+      &:hover{
+        background-color: rgba($DT-primary-color, .15);
+      }
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color:rgba($DT-primary-color, .65);
+      &:hover{
+        background-color: rgba($DT-primary-color, .8);
+      }
+    }
+  }
+}
 .item-list .todo-list{
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -8,44 +29,50 @@
   &::-webkit-scrollbar-track{
     background-color: transparent;
     &:hover{
-      background-color: rgba(23,162,184,0.15);
+      background-color: rgba($LT-primary-color, .15);
       border-radius: .25rem;
 
     }
   }
   &::-webkit-scrollbar-thumb{
-    background-color:rgba(23,162,184,0.65);
+    background-color:rgba($LT-primary-color, .65);
     border-radius: .25rem;
     &:hover{
-      background-color: rgba(23,162,184,0.8);
+      background-color: rgba($LT-primary-color, .8);
     }
   }
 }
-.item-list .todo-list li.scrollable:last-child{
-  scroll-snap-align: end;
-}
-.todo-list .list-group-item{
-  border-radius: .25rem;
-  color: #454545;
-  padding: .1rem .75rem;
-}
 
-.todo-list.todo-list-hidden{
-  max-height: 61vh;
-  overflow-y: auto;
+.item-list{
+  .todo-list{
+    &.todo-list-hidden{
+      max-height: 61vh;
+      overflow-y: auto;
 
-  @media screen and (max-width: 425px){
-    max-height: 48.4vh;
+      @media screen and (max-width: 425px){
+        max-height: 48.4vh;
+      }
+    }
+    li{
+      .scrollable{
+        &:last-child{
+          scroll-snap-align: end;
+        }
+      }
+    }
+    .list-group-item{
+      border-radius: .25rem;
+      color: $dark-gray-color;
+      padding: .1rem .75rem;
+      margin-bottom: .25rem;
+    }
   }
 }
-.list-group-item{
-  margin-bottom: .25rem;
-}
+
+
 .break-point{
   margin-top: 0.2rem;
 }
-
-
 
 .list-item-exit,
 .list-item-enter{
