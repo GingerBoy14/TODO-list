@@ -14,34 +14,31 @@
         box-shadow: $box-shadow;
         border-radius: .25rem;
         padding: .4rem .75rem;
-
+        transition: all $change-theme-transition-speed ease;
         label {
             font-weight: 500;
         }
         form{
             padding: 0 .2rem;
-        }
-
-        input {
-            &:focus{
-                border-color:rgba($LT-primary-color, .5);
-                box-shadow: $LT-input-box-shadow;
-            }
-            &:-webkit-autofill,
-            &:-webkit-autofill:hover,
-            &:-webkit-autofill:active {
-                transition: background-color 5000s ease-in-out 0s;
-            }
-
-            &:-webkit-autofill:focus {
-                -webkit-box-shadow: $LT-input-box-shadow !important;
+            input {
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:active {
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+                &:-webkit-autofill:focus {
+                    -webkit-box-shadow: $LT-input-box-shadow !important;
+                }
             }
         }
+
+
     }
 }
 [data-theme='dark'] .login-register-form-wrapper{
     .login-register-form{
         background-color: $DT-secondary-background;
+        transition: all $change-theme-transition-speed ease;
         form{
             .submit-btn{
                 color: $DT-lighter-text-color;
@@ -51,26 +48,19 @@
                     color: #fff;
                 }
             }
+            input{
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:active{
+                    -webkit-text-fill-color: $DT-lighter-text-color;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+                &:-webkit-autofill:focus{
+                    -webkit-box-shadow: $DT-input-box-shadow !important;
+                }
+            }
         }
-        input{
-            @include disable-border-outline;
-            background: #26353c;
-            color: $DT-lighter-text-color !important;
-            &:focus{
-                background-color: #26353c;
-                box-shadow: $DT-input-box-shadow;
-            }
-            &:-webkit-autofill,
-            &:-webkit-autofill:hover,
-            &:-webkit-autofill:active{
-                -webkit-text-fill-color: $DT-lighter-text-color;
-                transition: background-color 5000s ease-in-out 0s;
-            }
-            &:-webkit-autofill:focus{
-                -webkit-box-shadow: $DT-input-box-shadow !important;
-            }
 
-        }
     }
 
 }

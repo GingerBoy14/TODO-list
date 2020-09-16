@@ -8,7 +8,9 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
         align-items: center;
         margin:0 .3rem;
         position: relative;
+        transition: all $change-theme-transition-speed ease;
         .dropdown{
+            transition: all $change-theme-transition-speed ease;
             list-style: none;
             padding: .3rem 0;
             background-color: #fff;
@@ -76,6 +78,7 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
                 border-style: solid;
                 border-color: #fff transparent;
                 filter: drop-shadow(0 -.1rem .05rem rgba(0, 0, 0, 0.07));
+                transition: all $change-theme-transition-speed ease;
             }
         }
 
@@ -95,6 +98,7 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
 [data-theme='dark'] {
     .todo-list-item .drop-down-menu {
         .dropdown{
+            transition: all $change-theme-transition-speed ease;
             background-color: $DT-secondary-background;
 
             .menu-item{
@@ -106,6 +110,7 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
                 }
             }
             &::before {
+                transition: all $change-theme-transition-speed ease;
                 border-color: $DT-secondary-background transparent;
             }
         }

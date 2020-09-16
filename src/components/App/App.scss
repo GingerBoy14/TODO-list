@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap');
 @import "../../utils/scss/variables";
 @import "../../utils/scss/mixins";
 
@@ -22,12 +21,13 @@ html{
 }
 body{
     font-family: 'Comfortaa', cursive;
-    transition: all .35s ease;
+    transition: background-color $change-theme-transition-speed ease;
 }
 
 .todo-app{
     padding-top: 1rem;
     height: 90%;
+
     @media only screen and (min-width: 768px) {
         max-width: 450px;
     }
@@ -56,6 +56,7 @@ body{
 
 
 .form-control {
+    transition: all $change-theme-transition-speed ease;
     &:focus{
         border-color:rgba($LT-primary-color, .5);
         box-shadow: $LT-input-box-shadow;
@@ -73,16 +74,18 @@ body{
     body{
         color: $DT-primary-text-color;
         background: $DT-primary-background;
-        transition: all $change-theme-transition-speed ease;
     }
     .form-control{
         @include disable-border-outline;
-        background: #26353c;
+        background: $DT-text-input-bgc;
+        border: 1px solid $DT-text-input-bgc !important;
         color: $DT-lighter-text-color !important;
+        transition: all $change-theme-transition-speed ease;
         &:focus{
-            background-color: #26353c;
+            background-color: $DT-text-input-bgc;
             box-shadow: $DT-input-box-shadow;
         }
+
     }
 
      .submit-btn{
@@ -94,6 +97,7 @@ body{
         }
     }
     .btn-group > .btn{
+        transition: all $change-theme-transition-speed ease;
         font-weight: 600 !important;
     }
     .btn-info{

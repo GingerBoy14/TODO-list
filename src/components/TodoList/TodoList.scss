@@ -3,7 +3,10 @@
 
 [data-theme='dark']{
   .item-list .todo-list{
+
     .list-group-item{
+
+      transition: all $change-theme-transition-speed ease;
       background-color: $DT-secondary-background;
       color: $DT-lighter-text-color;
     }
@@ -61,6 +64,8 @@
       }
     }
     .list-group-item{
+
+      transition: all $change-theme-transition-speed ease;
       border-radius: .25rem;
       color: $dark-gray-color;
       padding: .1rem .75rem;

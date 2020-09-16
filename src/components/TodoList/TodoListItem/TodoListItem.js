@@ -33,7 +33,7 @@ const TodoListItem = (props) => {
                 unmountOnExit
                 onEnter={()=> console.log(pinToTop) }
                 onExit={()=> console.log(pinToTop) }>
-                <div/>
+                <div className="pin-to-top-indicator"/>
             </CSSTransition>
 
             <span className={classNames}>

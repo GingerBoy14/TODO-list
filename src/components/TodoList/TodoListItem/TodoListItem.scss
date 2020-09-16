@@ -1,38 +1,50 @@
+@import "../../../utils/scss/variables";
+
+$LT-important-text-color: #118091;
+$DT-important-text-color: #bfe2f0;
+
 .todo-list-item{
     display: flex;
+    &.done{
+        .todo-list-item-text{
+            text-decoration: line-through;
+        }
+    }
+    &.important{
+        .todo-list-item-text{
+            font-weight: 700;
+            color: $LT-important-text-color;
+        }
+    }
+    &-text{
+        font-size: 1.25rem;
+        line-height: 35px;
+        user-select: none;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        align-items: center;
+        >span{
+            cursor: pointer;
+        }
+    }
+    .list-group-item .pin-to-top-indicator{
+        padding: .25rem .5rem .25rem .75rem;
+        border-radius: .17rem;
+        border-right: .5rem solid $LT-primary-color;
+        border-left: .5rem solid $LT-primary-color;
+    }
 }
 
-.menu-popup{
-    color: #17a2b8;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 0 .7rem;
-    margin-left: .5rem;
-}
-.menu-popup:hover{
-    color: #fff;
-}
-.todo-list-item-text{
-    font-size: 1.25rem;
-    line-height: 35px;
-    user-select: none;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    align-items: center;
-}
-.todo-list-item-text span{
-    cursor: pointer;
-}
-.list-group-item > div{
-    padding: .25rem .5rem .25rem .75rem;
-    border-radius: .17rem;
-    border-right: .5rem solid #17a2b8;
-    border-left: .5rem solid #17a2b8;
-}
 
+[data-theme='dark'] {
+    .todo-list-item.important .todo-list-item-text {
+        font-weight: 700;
+        color:  #bfe2f0;
+    }
+
+}
 /* animation pinToTop */
 .list-group-item .pinToTop-enter{
     opacity: 0;
@@ -46,19 +58,7 @@
 }
 .list-group-item .pinToTop-exit.pinToTop-exit-active{
     opacity: 0;
-    
+
     transition: all 330ms ease-out;
 }
 
-
-
-
-
-
-.todo-list-item.done .todo-list-item-text{
-    text-decoration: line-through;
-}
-.todo-list-item.important .todo-list-item-text{
-    font-weight: bold;
-    color: steelblue;
-}
