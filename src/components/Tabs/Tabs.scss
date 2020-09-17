@@ -52,6 +52,7 @@ $DT-nav-link-hover-color: #a5a5a5;
             height: .2rem;
             background: $LT-primary-color;
             border-radius: .25rem;
+            transition: background $change-theme-transition-speed ease;
         }
     }
 }
@@ -72,6 +73,7 @@ $DT-nav-link-hover-color: #a5a5a5;
         .slider{
             .indicator{
                 background: $DT-primary-color;
+                transition: background $change-theme-transition-speed ease;
             }
         }
     }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import DropDownMenu from "../../DropDownMenu";
+import ItemDropDown from "../../ItemDropDown";
 
 import "./TodoListItem.scss"
 import {CSSTransition} from "react-transition-group";
@@ -40,7 +40,7 @@ const TodoListItem = (props) => {
             <div className="todo-list-item-text">
                  <span onClick={onToggleDone}>{text}</span>
              </div>
-            <DropDownMenu
+            <ItemDropDown
                 onDeleted={onDeleted}
                 onToggleImportant={onToggleImportant}
                 handlePinToTop={handlePinToTop}/>

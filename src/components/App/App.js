@@ -20,7 +20,7 @@ const App = ({ location }) =>{
             setTheme(detectColorScheme());
         });
         setTheme(detectColorScheme());
-
+        return () => window.matchMedia('(prefers-color-scheme: dark)').removeEventListener();
     },[setTheme]);
     const changeTheme = (checked)=> {
         const setTo = checked ? "dark" : "light"

@@ -8,7 +8,6 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
         align-items: center;
         margin:0 .3rem;
         position: relative;
-        transition: all $change-theme-transition-speed ease;
         .dropdown{
             transition: all $change-theme-transition-speed ease;
             list-style: none;
@@ -87,7 +86,7 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
                 transform: rotate(-90deg);
                 color: $LT-primary-color;
             }
-            transition: all .2s ease-in-out;
+            transition: transform .2s ease-in-out;
             cursor: pointer;
             &:hover{
                 color: $LT-primary-color;
@@ -98,7 +97,6 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
 [data-theme='dark'] {
     .todo-list-item .drop-down-menu {
         .dropdown{
-            transition: all $change-theme-transition-speed ease;
             background-color: $DT-secondary-background;
 
             .menu-item{
@@ -114,17 +112,16 @@ $LT-dropdown-item-hover-bg:rgb(23,223,245);
                 border-color: $DT-secondary-background transparent;
             }
         }
-            .icon {
-                &.open {
-                    transform: rotate(-90deg);
-                    color: $DT-primary-color;
-                }
+        .icon {
+            &.open {
+                color: $DT-primary-color;
+            }
 
-                &:hover {
-                    color: $DT-primary-color;
-                }
+            &:hover {
+                color: $DT-primary-color;
             }
         }
+    }
 
 }
 
