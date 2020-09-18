@@ -55,6 +55,8 @@ export default class TodoApp extends Component{
 
         addItem = (label) =>{
             const newItem = this.creatTodoItem(label);
+            console.log(this.props)
+            this.props.createTodoItem(label);
             this.setState(({todoData})=>{
                 const newArray = [
                     ...todoData,

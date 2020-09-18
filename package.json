@@ -18,7 +18,9 @@
     "react-scripts": "^3.4.3",
     "react-scroll": "^1.7.16",
     "react-transition-group": "^4.4.1",
+    "redux": "^4.0.5",
     "redux-firestore": "^0.13.0",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

@@ -1,52 +1,45 @@
 import React, {useState} from "react";
-import { withRouter } from "react-router-dom";
+
+import FormGroup from "../FormGroup";
+import PasswordInput from "../PasswordInput";
 
 import "./RegisterForm.scss";
 
-const RegisterForm = ({ history }) =>{
-    const [showPassword, setShowPassword] = useState(false);
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        console.log("ok");
-        history.push("/todoApp")
-    };
+
+const RegisterForm = ({ handleSubmit }) =>{
+    const [userData, setUserData] = useState({});
+
+    const onChangeInput = (e, value) => setUserData({...userData, [value]:e.target.value})
+    console.log(userData)
     return(
         <>
-            <form  onSubmit={handleSubmit}>
+            <form  onSubmit={(e)=>handleSubmit(e, userData)}>
 
-                <div className="form-group">
-                    <label htmlFor="InputUsername">Username</label>
-                    <input type="text"
-                           className="form-control"
-                           id="InputUsername"
-                           placeholder="Username"/>
-                    <small id="emailHelp" className="form-text text-muted">It's your unique name in system.</small>
-                </div>
-                <div className="form-group">
+                <FormGroup
+                    id="userNameInput"
+                    placeholder="Username"
+                    inputType="text"
+                    changedField="username"
+                    onChange={onChangeInput}>
+                    <label htmlFor="regEmailInput">Username</label>
+                    <small id="userNameHelp" className="form-text text-muted">
+                        It's your unique name in system.
+                    </small>
+                </FormGroup>
+
+                <FormGroup
+                    id="regEmailInput"
+                    placeholder="name@example.com"
+                    inputType="email"
+                    changedField="email"
+                    onChange={onChangeInput}>
                     <label htmlFor="regEmailInput">Email address</label>
-                    <input type="email"
-                           className="form-control"
-                           id="regEmailInput"
-                           placeholder="name@example.com"/>
                     <small id="emailHelp" className="form-text text-muted">
                         We'll never share your email with anyone else.
                     </small>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="regInputPassword">Password</label>
-                    <div className="password-input-wrapper">
-                        <input type={showPassword?'text':'password'}
-                               className="form-control"
-                               id="regInputPassword"
-                               placeholder="Password"/>
-                        <i className={`show-password-icon far fa-eye ${showPassword?'active':'inactive'}`}
-                           onClick={()=>setShowPassword(!showPassword)}
-                        />
-                    </div>
-                    <small id="emailHelp" className="form-text text-muted">
-                        No one should know your password.
-                    </small>
-                </div>
+                </FormGroup>
+
+                <PasswordInput onChange={onChangeInput} changedField="password"/>
 
                 <button type="submit"
                         className="btn submit-btn">
@@ -56,4 +49,6 @@ const RegisterForm = ({ history }) =>{
         </>
     );
 };
-export default withRouter(RegisterForm);
+
+
+export default RegisterForm;

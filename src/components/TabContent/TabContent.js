@@ -2,15 +2,15 @@ import React from "react";
 import {Redirect, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
-import withAnimateHeight from "../HOC";
+import {withAnimateHeight} from "../HOC";
 import {compose} from "../../utils";
 
 import {
-    RegisterForm,
     LoginForm
 } from "../Forms";
 
 import "./TabContent.scss"
+import RegisterFormContainer from "../../containers/RegisterFormContainer";
 
 const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
 
@@ -30,7 +30,7 @@ const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
                 onEnter={calcHeight}>
                 <Switch location={location}>
                     <Route path={`${match.path}login`} component={LoginForm}/>
-                    <Route path={`${match.path}register`} component={RegisterForm}/>
+                    <Route path={`${match.path}register`} component={RegisterFormContainer}/>
                     <Redirect to={`${match.path}login`}/>
                 </Switch>
             </CSSTransition>

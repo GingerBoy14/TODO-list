@@ -1,20 +1,12 @@
-import React, {useEffect, useState} from "react";
-import { withRouter } from "react-router-dom";
+import React from "react";
+
 
 import Nav from "../../components/Tabs"
 import TabContent from "../../components/TabContent";
 
 import "./Form.scss"
 
-const Form = ({ location }) =>{
-    const [ activeTab, setActiveTab ] = useState(location.pathname.split("/user/")[1] === "login");
-    //change the content
-    useEffect(() => {
-        setActiveTab(!activeTab);
-    }, [location.pathname,setActiveTab]);
-
-    const animationClassNames =
-        activeTab ? "slide-to-login" : "slide-to-reg";
+const Form = ({ animationClassNames }) =>{
 
     return(
         <div className="login-register-form-wrapper">
@@ -26,4 +18,4 @@ const Form = ({ location }) =>{
     );
 };
 
-export default withRouter(Form);
+export default Form;

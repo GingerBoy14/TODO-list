@@ -24,8 +24,6 @@ function ItemDropDown(props){
 const DropDown = ({ onToggleImportant, onDeleted, handlePinToTop, setShow}) =>{
     const wrapperRef = useRef();
 
-
-
     //func. for handling outside click
     useEffect(() => {
         const handleClickOutside = event => {

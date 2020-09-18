@@ -62,6 +62,11 @@ body{
         box-shadow: $LT-input-box-shadow;
     }
 }
+.btn{
+    &:focus{
+        box-shadow:$LT-input-box-shadow;
+    }
+}
 .submit-btn{
     transition: all .25s ease-in-out;
     background-color: $LT-button-background;
@@ -100,9 +105,15 @@ body{
         transition: all $change-theme-transition-speed ease;
         font-weight: 600 !important;
     }
+
+    .btn{
+        &:focus{
+            box-shadow: $DT-input-box-shadow;
+        }
+    }
     .btn-info{
         background-color:  $DT-primary-color;
-        border-color: $DT-primary-color;
+        border-color: transparent;
         color: $DT-primary-background;
 
         &:hover{

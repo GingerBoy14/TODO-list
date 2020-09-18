@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import FormGroup from "../FormGroup";
+import PasswordInput from "../PasswordInput";
 
 const LoginForm = ({ history }) =>{
     const handleSubmit = (event) =>{
@@ -9,26 +11,17 @@ const LoginForm = ({ history }) =>{
     return(
         <>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <FormGroup
+                    id="logEmailInput"
+                    placeholder="name@example.com"
+                    inputType="email">
                     <label htmlFor="logEmailInput">Email address</label>
-                    <input type="email"
-                           className="form-control"
-                           placeholder="name@example.com"
-                           id="logEmailInput"/>
-                    <small className="form-text text-muted">
-                        We'll never share your email with anyone else.
+                    <small id="emailHelp" className="form-text text-muted">
+                        It's your unique name in system.
                     </small>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="regInputPassword">Password</label>
-                    <input type="password"
-                           className="form-control"
-                           id="regInputPassword"
-                           placeholder="Password"/>
-                    <small className="form-text text-muted">
-                        No one should know your password.
-                    </small>
-                </div>
+                </FormGroup>
+
+                <PasswordInput/>
                 <button type="submit"
                         className="btn submit-btn">
                     Submit

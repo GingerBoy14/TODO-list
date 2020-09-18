@@ -8,6 +8,7 @@ $DT-important-text-color: #bfe2f0;
     &.done{
         .todo-list-item-text{
             text-decoration: line-through;
+            font-weight: 300;
         }
     }
     &.important{
@@ -41,7 +42,7 @@ $DT-important-text-color: #bfe2f0;
 [data-theme='dark'] {
     .todo-list-item.important .todo-list-item-text {
         font-weight: 700;
-        color:  #bfe2f0;
+        color:  $DT-important-text-color;
     }
 
 }

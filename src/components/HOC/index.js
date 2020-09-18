@@ -1,3 +1,7 @@
 import withAnimateHeight from "./withAnimateHeight";
+import WithFireStore from "./WithFireStore";
 
-export default withAnimateHeight;
+export{
+    withAnimateHeight,
+    WithFireStore
+};
