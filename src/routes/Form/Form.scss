@@ -19,12 +19,18 @@
             font-weight: 500;
         }
         form{
-            padding: 0 .2rem;
+            padding: .2rem;
+            .form-control.error{
+                background-color: rgba(red, .05);
+                border-color:rgba(red, .3);
+                box-shadow:  0 0 .2rem .15rem rgba(red,0.15);
+            }
             input {
                 &:-webkit-autofill,
                 &:-webkit-autofill:hover,
                 &:-webkit-autofill:active {
-                    transition: background-color 5000s ease-in-out 0s;
+                    transition: background-color 5000s ease-in-out 0s,  box-shadow .35s ease;
+                    -webkit-box-shadow: 0 0 0 1000px white inset;
                 }
                 &:-webkit-autofill:focus {
                     -webkit-box-shadow: $LT-input-box-shadow !important;
@@ -53,7 +59,8 @@
                 &:-webkit-autofill:hover,
                 &:-webkit-autofill:active{
                     -webkit-text-fill-color: $DT-lighter-text-color;
-                    transition: background-color 5000s ease-in-out 0s;
+                    transition: background-color 5000s ease-in-out 0s, box-shadow .35s ease;
+                    -webkit-box-shadow: 0 0 0 1000px $DT-text-input-bgc inset;
                 }
                 &:-webkit-autofill:focus{
                     -webkit-box-shadow: $DT-input-box-shadow !important;

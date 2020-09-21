@@ -1,15 +1,17 @@
-import React from "react";
+import React, {forwardRef} from "react";
 
-const FormGroup = ({id, inputType, placeholder, onChange, changedField, children}) => (
+const FormGroup = forwardRef(({id, inputType, inputName, placeholder, errors, children}, ref) => (
     <div className="form-group">
         {children[0]}
         <input type={inputType}
-               className="form-control"
+               className={`form-control ${errors ? 'error':''}`}
                id={id}
+               name={inputName}
                placeholder={placeholder}
-               onChange={(e) => onChange(e, changedField)}/>
+               ref={ref}
+              />
         {children[1]}
     </div>
-);
+));
 
 export default FormGroup;

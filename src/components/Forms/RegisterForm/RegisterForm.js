@@ -1,29 +1,36 @@
-import React, {useState} from "react";
+import React, { useEffect } from "react";
 
 import FormGroup from "../FormGroup";
 import PasswordInput from "../PasswordInput";
 
 import "./RegisterForm.scss";
+import {useForm} from "react-hook-form";
 
 
-const RegisterForm = ({ handleSubmit }) =>{
-    const [userData, setUserData] = useState({});
+const RegisterForm = ({onSubmit, loginError}) =>{
+    const { handleSubmit, register, errors, setError } = useForm({ criteriaMode:'all' });
+    useEffect(()=>{
+        if (loginError){
+            setError("email",{
+                message:"The email address is already in use."
+            })
+        }
 
-    const onChangeInput = (e, value) => setUserData({...userData, [value]:e.target.value})
-    console.log(userData)
+    },[loginError]);
     return(
         <>
-            <form  onSubmit={(e)=>handleSubmit(e, userData)}>
+            <form  onSubmit={handleSubmit(onSubmit)}>
 
                 <FormGroup
                     id="userNameInput"
                     placeholder="Username"
                     inputType="text"
-                    changedField="username"
-                    onChange={onChangeInput}>
+                    inputName="username"
+                    ref={register({required: false})}
+                    errors={errors.username}>
                     <label htmlFor="regEmailInput">Username</label>
                     <small id="userNameHelp" className="form-text text-muted">
-                        It's your unique name in system.
+                        {errors.username ? errors.username.message : 'It\'s your unique name in system.'}
                     </small>
                 </FormGroup>
 
@@ -31,15 +38,35 @@ const RegisterForm = ({ handleSubmit }) =>{
                     id="regEmailInput"
                     placeholder="name@example.com"
                     inputType="email"
-                    changedField="email"
-                    onChange={onChangeInput}>
+                    inputName="email"
+                    ref={register({
+                        required: "Required",
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: "invalid email address"
+                        }
+                    })}
+                    errors={errors.email}>
                     <label htmlFor="regEmailInput">Email address</label>
                     <small id="emailHelp" className="form-text text-muted">
-                        We'll never share your email with anyone else.
+                        {errors.email ? errors.email.message : 'We\'ll never share your email with anyone else.'}
                     </small>
                 </FormGroup>
 
-                <PasswordInput onChange={onChangeInput} changedField="password"/>
+                <PasswordInput
+                    inputName="password"
+                    ref={register({
+                        required: "Required",
+                        pattern: {
+                            value: /^[\w\d]+$/i,
+                            message: "Password must contains only characters and digits"
+                        },
+                        minLength: {
+                            value: 6,
+                            message: "Password must contains at least 6 characters."
+                        }
+                    })}
+                    errors={errors.password}/>
 
                 <button type="submit"
                         className="btn submit-btn">

@@ -10,7 +10,7 @@ import {
     toggleImportant,
     togglePinToTop
 } from "../redux/actions"
-import Loading from "../components/Loading";
+
 const TodoAppContainer = ({todoList,createTodoItem}) =>{
     const {todos, loading} = todoList;
 

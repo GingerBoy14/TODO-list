@@ -1,24 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 import {withRouter} from "react-router-dom";
 import {useFirebase} from "react-redux-firebase";
 import {RegisterForm} from "../components/Forms";
 const createNewUser = (firebase,{ email, password, username }) => {
-    firebase.createUser(
+   return firebase.createUser(
         { email, password },
         { username, email }
     )
 }
 const FormContainer = ({history}) =>{
     const firebase = useFirebase();
-    const handleSubmit = (e, userData) =>{
-        e.preventDefault();
+    const [error, setError] = useState();
+    const handleSubmit = (userData) =>{
+
         console.log(firebase,userData);
         createNewUser(firebase, userData)
-            .then((user)=>console.log(user))
-            .catch((err)=>console.log(err));
-        history.push("/todoApp")
+            .then((user)=>{
+                console.log(user);
+                history.push("/todoApp")
+            })
+            .catch((err)=>setError(err));
+
     };
-    return <RegisterForm handleSubmit={handleSubmit}/>
+    return <RegisterForm onSubmit={handleSubmit} loginError={error}/>
 }
 
 export default withRouter(FormContainer);

@@ -1,4 +1,4 @@
-import {firebaseConfig,  firebase} from "./config";
+import {firebaseConfig,  firebase} from "./firebaseConfig";
 
 
 export {
