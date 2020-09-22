@@ -1,17 +1,19 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunkMiddleware from "redux-thunk";
 import logger from "redux-logger";
-import {getFirebase} from "react-redux-firebase";
 import {reduxFirestore, getFirestore} from "redux-firestore";
 import {firebase} from "../service";
 import rootReducer from './reducers';
 import thunk from "redux-thunk";
+import TodoService from "../service/TodoService";
+
+const todoService = new TodoService(firebase);
 
 const dbMiddleware = compose(
     reduxFirestore(firebase),
     applyMiddleware(
+        thunk.withExtraArgument({ getFirestore, todoService}),
         thunkMiddleware,
-        thunk.withExtraArgument({getFirebase, getFirestore}),
         logger),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

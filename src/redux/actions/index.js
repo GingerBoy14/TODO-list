@@ -6,13 +6,14 @@ import {
     togglePinToTop
 } from "./todoListItemActions"
 
+import {fetchData} from "./todoListActions";
 
 export {
     addTodo,
     deleteTodo,
     toggleDone,
     toggleImportant,
-    togglePinToTop
+    togglePinToTop,
 
-
+    fetchData
 }

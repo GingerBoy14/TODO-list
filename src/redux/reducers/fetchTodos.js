@@ -1,6 +1,6 @@
 import {FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS} from "../types";
 
-export const fetchData = (state, action) =>{
+export const fetchTodos = (state, action) =>{
     switch (action.type) {
         case FETCH_DATA_SUCCESS:
             return {

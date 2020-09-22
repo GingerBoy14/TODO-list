@@ -6,29 +6,33 @@ import {
     TODO_TOGGLE_DONE
 } from "../types";
 
-const addItem = (text) =>{
-        return{
-            text,
-            important: false,
-            done: false,
-            pinToTop: false
-        };
+const addItem = ({id, text}) =>{
+    return{
+        id,
+        text,
+        pinToTop:false, important:false, done:false
+    };
 }
 const delItem = (todos, todoId) =>{
-        return{
-            ...todos.slice(0, todoId),
-            ...todos.slice(todoId+1)
-        };
+    return{
+        ...todos.slice(0, todoId),
+        ...todos.slice(todoId+1)
+    };
 }
+
+const toggleStatus = (todos, todoId, status) =>{
+    const item = todos.find(({id})=>id===todoId);
+    return[
+        ...todos,
+        {...item, [status]: !item[status]}
+    ]
+}
+
 
 
 export const todoListItemReducer = (state, {payload, type}) =>{
-    if (state === undefined){
-        return {
-            id:0,
-            text: '',
-            status: ''
-        }
+    if (!state){
+        return [{id:0, text: '', pinToTop:false, important:false, done:false}]
     }
     switch (type) {
         case ADD_TODO:
@@ -39,8 +43,11 @@ export const todoListItemReducer = (state, {payload, type}) =>{
         case DELETE_TODO:
             return delItem(state, payload)
         case TODO_TOGGLE_PINTOTOP:
+            return toggleStatus(state, payload, "pinToTop");
         case TODO_TOGGLE_IMPORTANT:
+            return toggleStatus(state, payload, "important")
         case TODO_TOGGLE_DONE:
+            return toggleStatus(state, payload, "done")
 
         default:
             return state;

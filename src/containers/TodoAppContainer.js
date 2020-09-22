@@ -1,36 +1,42 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
 import {TodoApp} from "../routes";
-import {
-    addTodo,
-    deleteTodo,
-    toggleDone,
-    toggleImportant,
-    togglePinToTop
-} from "../redux/actions"
+import {addTodo} from "../redux/actions"
+import {compose} from "../utils";
+import {firestoreConnect} from "react-redux-firebase";
+import {fetchData} from "../redux/actions";
 
-const TodoAppContainer = (props) =>{
-    const {todos, loading} = props.todoList;
-
+const TodoAppContainer = ({ fetchTodos, todos, todosLoaded, createTodoItem, todoList }) =>{
+    useEffect(()=>{
+        if (todosLoaded){
+            fetchTodos(todos)
+        }
+    },[fetchTodos, todos, todosLoaded])
     return(
-        <TodoApp {...props} todoList={todos}/>
+        <TodoApp createTodoItem={createTodoItem} todoList={todoList}/>
     )
 }
 
 
 
-const mapStateToProps = ({todoList}) =>{
-    return{todoList}
+const mapStateToProps = ({ firestore: { ordered:{todos},status:{requested}}, todoList }) =>{
+    return {
+        todos,
+        todoList,
+        todosLoaded: requested.todos
+    }
 }
 const mapDispatchToProps = (dispatch) =>{
     return bindActionCreators({
         createTodoItem:addTodo,
-        deleteTodo:deleteTodo,
-        togglePinToTop:togglePinToTop,
-        toggleDone:toggleDone,
-        toggleImportant:toggleImportant
+        fetchTodos: fetchData
     }, dispatch) ;
 };
-export default connect(mapStateToProps,mapDispatchToProps)(TodoAppContainer)
+export default compose(
+    connect(mapStateToProps,mapDispatchToProps),
+    firestoreConnect(({userId}) =>[
+            { collection: `users/${userId}/todos`, storeAs:'todos' } // or `todos/${props.todoId}`
+        ])
+)(TodoAppContainer)
