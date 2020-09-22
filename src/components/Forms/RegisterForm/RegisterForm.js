@@ -1,23 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import FormGroup from "../FormGroup";
 import PasswordInput from "../PasswordInput";
 
 import "./RegisterForm.scss";
-import {useForm} from "react-hook-form";
 
 
-const RegisterForm = ({onSubmit, loginError}) =>{
-    const { handleSubmit, register, errors, setError } = useForm({ criteriaMode:'all' });
-    useEffect(()=>{
-        if (loginError){
-            setError("email",{
-                message:"The email address is already in use."
-            })
-        }
-
-    },[loginError]);
-    return(
+const RegisterForm = ({onSubmit,handleSubmit,register, errors}) =>(
         <>
             <form  onSubmit={handleSubmit(onSubmit)}>
 
@@ -75,7 +64,6 @@ const RegisterForm = ({onSubmit, loginError}) =>{
             </form>
         </>
     );
-};
 
 
 export default RegisterForm;

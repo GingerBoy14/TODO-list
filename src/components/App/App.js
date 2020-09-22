@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import {  Route, Switch } from "react-router-dom";
 
 import ThemeToggle from "../ThemeToggle";
 
@@ -8,18 +8,22 @@ import {
     FormContainer,
     TodoAppContainer
 } from "../../containers";
+import Loading from "../Loading";
 
 //location need to correct work switch animation
 
-const App = ({ theme, changeTheme, location }) =>(
+const App = ({ theme, changeTheme, userProfile, location }) =>(
     <div className="todo-app-wrapper">
         <ThemeToggle theme={theme} changeTheme={changeTheme}/>
         <div className="todo-app container">
-            <Switch location={location}>
-                <Route path="/todoApp" component={TodoAppContainer}/>
-                <Route path="/user/" component={FormContainer}/>
-                <Redirect to="/user/"/>
-            </Switch>
+            {!userProfile.isLoaded&&!userProfile.email ? <Loading/>
+                : <Switch location={location}>
+                    <Route path="/todoApp" component={TodoAppContainer}/>
+                    <Route path="/user" component={FormContainer}/>
+
+                </Switch>
+            }
+
         </div>
     </div>
 );

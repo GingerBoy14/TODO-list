@@ -1,17 +1,21 @@
-import React,{useState} from "react";
+import React from "react";
 import {withRouter} from "react-router-dom";
 import {useFirebase} from "react-redux-firebase";
 import {RegisterForm} from "../components/Forms";
+import {useForm} from "react-hook-form";
+
 const createNewUser = (firebase,{ email, password, username }) => {
    return firebase.createUser(
         { email, password },
         { username, email }
     )
 }
-const FormContainer = ({history}) =>{
+
+const RegisterFormContainer = ({history}) =>{
     const firebase = useFirebase();
-    const [error, setError] = useState();
-    const handleSubmit = (userData) =>{
+    const { handleSubmit, register, errors, setError } = useForm({ criteriaMode:'all' });
+
+    const onSubmit = (userData) =>{
 
         console.log(firebase,userData);
         createNewUser(firebase, userData)
@@ -19,10 +23,12 @@ const FormContainer = ({history}) =>{
                 console.log(user);
                 history.push("/todoApp")
             })
-            .catch((err)=>setError(err));
+            .catch(()=>setError("email",{
+                message:"The email address is already in use."
+            }));
 
     };
-    return <RegisterForm onSubmit={handleSubmit} loginError={error}/>
+    return <RegisterForm onSubmit={onSubmit} handleSubmit={handleSubmit} register={register} errors={errors}/>
 }
 
-export default withRouter(FormContainer);
+export default withRouter(RegisterFormContainer);

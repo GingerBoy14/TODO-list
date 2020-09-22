@@ -4,7 +4,6 @@ const withAnimateHeight = (styleClass = null, timeout) => (Wrapper) => (props) =
     const dropdownRef = useRef(null);
     useEffect(()=>setMenuHeight(dropdownRef.current.offsetHeight),[dropdownRef]);
     const [ menuHeight, setMenuHeight ] = useState(null);
-
     //calculate the height of content div when it change
     const calcHeight = (el) =>{
         setMenuHeight(el.offsetHeight);

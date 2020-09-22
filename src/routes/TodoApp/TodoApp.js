@@ -16,7 +16,7 @@ export default class TodoApp extends Component{
         };
 
 
-        creatTodoItem(text){
+    creatTodoItem(text){
             return{
                 id:this.lastId++,
                 text,

@@ -5,15 +5,14 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {withAnimateHeight} from "../HOC";
 import {compose} from "../../utils";
 
-import {
-    LoginForm
-} from "../Forms";
 
 import "./TabContent.scss"
-import RegisterFormContainer from "../../containers/RegisterFormContainer";
+import {
+    RegisterFormContainer,
+    LoginFormContainer
+} from "../../containers";
 
 const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
-
     const currentKey = location.pathname.split("/user/")[1]; // del /user/ from path
     return(
         <TransitionGroup
@@ -29,9 +28,9 @@ const TabContent = ({ match, location, animationClassNames, calcHeight }) =>{
                 classNames={animationClassNames}
                 onEnter={calcHeight}>
                 <Switch location={location}>
-                    <Route path={`${match.path}login`} component={LoginForm}/>
-                    <Route path={`${match.path}register`} component={RegisterFormContainer}/>
-                    <Redirect to={`${match.path}login`}/>
+                    <Route path={`${match.path}/login`} component={LoginFormContainer}/>
+                    <Route path={`${match.path}/register`} component={RegisterFormContainer}/>
+                    <Redirect to={`${match.path}/login`}/>
                 </Switch>
             </CSSTransition>
         </TransitionGroup>

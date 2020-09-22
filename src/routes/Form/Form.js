@@ -6,9 +6,7 @@ import TabContent from "../../components/TabContent";
 
 import "./Form.scss"
 
-const Form = ({ animationClassNames }) =>{
-
-    return(
+const Form = ({ animationClassNames }) =>(
         <div className="login-register-form-wrapper">
             <div className="login-register-form">
                 <Nav/>
@@ -16,6 +14,5 @@ const Form = ({ animationClassNames }) =>{
             </div>
         </div>
     );
-};
 
 export default Form;

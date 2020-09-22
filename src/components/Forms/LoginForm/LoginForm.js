@@ -1,27 +1,36 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import FormGroup from "../FormGroup";
 import PasswordInput from "../PasswordInput";
 
-const LoginForm = ({ history }) =>{
-    const handleSubmit = (event) =>{
-        event.preventDefault();
-        history.push("/todoApp");
-    };
+const LoginForm = ({ onSubmit,handleSubmit,register, errors }) =>{
+
     return(
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <FormGroup
                     id="logEmailInput"
                     placeholder="name@example.com"
-                    inputType="email">
-                    <label htmlFor="logEmailInput">Email address</label>
+                    inputType="email"
+                    inputName="email"
+                    ref={register({
+                        required: "Required",
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: "invalid email address"
+                        }
+                    })}
+                    errors={errors.email}>
+                    <label htmlFor="regEmailInput">Email address</label>
                     <small id="emailHelp" className="form-text text-muted">
-                        It's your unique name in system.
+                        {errors.email ? errors.email.message : 'We\'ll never share your email with anyone else.'}
                     </small>
                 </FormGroup>
 
-                <PasswordInput/>
+                <PasswordInput
+                    inputName="password"
+                    ref={register({required: "Required"})}
+                    errors={errors.password}/>
+
                 <button type="submit"
                         className="btn submit-btn">
                     Submit
@@ -31,4 +40,4 @@ const LoginForm = ({ history }) =>{
     );
 };
 
-export default withRouter(LoginForm);
+export default LoginForm;

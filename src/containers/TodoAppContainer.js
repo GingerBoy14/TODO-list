@@ -11,11 +11,11 @@ import {
     togglePinToTop
 } from "../redux/actions"
 
-const TodoAppContainer = ({todoList,createTodoItem}) =>{
-    const {todos, loading} = todoList;
+const TodoAppContainer = (props) =>{
+    const {todos, loading} = props.todoList;
 
     return(
-        <TodoApp createTodoItem={createTodoItem}/>
+        <TodoApp {...props} todoList={todos}/>
     )
 }
 
