@@ -5,9 +5,14 @@ export default class TodoService {
         this.collectionName = 'todos'
     }
 
+    setData = async (todos) =>{
+        return [...JSON.parse(JSON.stringify(todos))];
+    };
 
-    addTodo = (data) =>{
+    addTodo = (data, uid) =>{
         return this.firestore
+            .collection('users')
+            .doc(uid)
             .collection(this.collectionName)
             .add(data)
     }

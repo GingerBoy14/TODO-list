@@ -9,10 +9,10 @@ const dataRequested = () =>{
         type: FETCH_DATA_REQUEST
     };
 };
-const dataLoaded = (products) =>{
+const dataLoaded = (todos) =>{
     return{
         type: FETCH_DATA_SUCCESS,
-        payload: products
+        payload: todos
     }
 };
 const dataError = ( error ) =>{
@@ -20,4 +20,11 @@ const dataError = ( error ) =>{
         type: FETCH_DATA_FAILURE,
         payload: error
     }
+};
+
+export const fetchData = (products,categories) => (dispatch, getState, {todoService}) =>{
+    dispatch(dataRequested());
+    todoService.setData(products,categories)
+        .then((data) => dispatch(dataLoaded(data)))
+        .catch((error) => dispatch(dataError(error)));
 };

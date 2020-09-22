@@ -4,9 +4,10 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import {changeColorScheme, compose, detectColorScheme} from "../utils";
 import App from "../components/App";
 import {connect} from "react-redux";
+import ThemeToggle from "../components/ThemeToggle";
 
 
-const AppContainer = ({ location, history, profile }) =>{
+const AppContainer = ({ location, history, profile, userId }) =>{
     const [theme, setTheme] = useState("light");
     useEffect(()=>{
         window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
@@ -40,18 +41,21 @@ const AppContainer = ({ location, history, profile }) =>{
     const currentKey = location.pathname.split("/")[1] || "/";
 
     return(
-        <SwitchTransition>
-            <CSSTransition
-                key={currentKey}
-                timeout={300}
-                classNames="app">
-                <App theme={theme} changeTheme={changeTheme} location={location} userProfile={profile}/>
-            </CSSTransition>
-        </SwitchTransition>
+        <div className="todo-app-wrapper">
+            <ThemeToggle theme={theme} changeTheme={changeTheme}/>
+            <SwitchTransition>
+                <CSSTransition
+                    key={currentKey}
+                    timeout={300}
+                    classNames="app">
+                    <App  location={location} userProfile={profile} userId={userId}/>
+                </CSSTransition>
+            </SwitchTransition>
+        </div>
     );
 };
-const mapStateToProps = ({firebase:{profile}}) => {
-    return {profile};
+const mapStateToProps = ({firebase:{auth:{uid}, profile}}) => {
+    return {profile, userId: uid};
 }
 export default compose(
     connect(mapStateToProps),

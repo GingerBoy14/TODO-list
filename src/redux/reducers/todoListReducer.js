@@ -10,7 +10,7 @@ import {
     TODO_TOGGLE_DONE
 } from "../types";
 
-import {fetchData} from "./fetchData";
+import {fetchTodos} from "./fetchTodos";
 import {todoListItemReducer} from "./todoListItemReducer";
 
 export const todoListReducer = (state, action) =>{
@@ -25,7 +25,7 @@ export const todoListReducer = (state, action) =>{
         case FETCH_DATA_SUCCESS:
         case FETCH_DATA_REQUEST:
         case FETCH_DATA_FAILURE:
-            return fetchData(state, action);
+            return fetchTodos(state, action);
 
         case ADD_TODO:
         case DELETE_TODO:
