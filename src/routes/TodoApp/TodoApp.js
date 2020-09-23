@@ -10,10 +10,10 @@ import Loading from "../../components/Loading";
 
 const TodoApp = ({todoList, createTodoItem}) =>{
     const [visibleItems, setVisibleItems] = useState([]);
-
-    useEffect(()=>setVisibleItems(todoList.todos),[todoList.todos]);
-    const doneCount = todoList.todos.filter((el)=>el.done).length;
-    const todoCount = todoList.todos.length - doneCount;
+    const { todos, loading } = todoList;
+    useEffect(()=>setVisibleItems(todos),[todos]);
+    const doneCount = todos.filter((el)=>el.done).length;
+    const todoCount = todos.length - doneCount;
 
 
 
@@ -28,7 +28,7 @@ const TodoApp = ({todoList, createTodoItem}) =>{
                 displayData={setVisibleItems}/>
 
             {
-                todoList.loading ? <Loading/>
+                loading ? <Loading/>
                     :<TodoList todoItem={visibleItems}/>
             }
 

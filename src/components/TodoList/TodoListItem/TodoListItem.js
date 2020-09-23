@@ -23,13 +23,12 @@ const TodoListItem = ({
     if(pinToTop){
         classNames += ` pin-to-top`;
     }
-
     return (
         <CSSTransition
             key={id}
             timeout={330}
             classNames="list-item">
-            <li key={id} className="list-group-item">
+            <li className="list-group-item">
                     <span className={classNames}>
                     <div className="todo-list-item-text">
                          <span onClick={()=>toggleDone(id)}>{text}</span>

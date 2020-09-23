@@ -12,7 +12,7 @@ const TodoList = ({todoItem}) =>(
         <div className="item-list">
             <ul className={`list-group todo-list ${todoItem.length>9 ? `todo-list-hidden` : null}`}>
                 <TransitionGroup>
-                    {todoItem.map((todo)=><TodoListItem {...todo}/>)}
+                    {todoItem.map((todo)=><TodoListItem key={todo.id} {...todo}/>)}
                 </TransitionGroup>
             </ul>
         </div>

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
@@ -8,12 +8,12 @@ import {compose} from "../utils";
 import {firestoreConnect} from "react-redux-firebase";
 import {fetchData} from "../redux/actions";
 
-const TodoAppContainer = ({ fetchTodos, todos, todosLoaded, createTodoItem, todoList }) =>{
+const TodoAppContainer = ({ fetchTodos, todosLoaded, createTodoItem, todoList }) =>{
     useEffect(()=>{
         if (todosLoaded){
-            fetchTodos(todos)
+            fetchTodos()
         }
-    },[fetchTodos, todos, todosLoaded])
+    },[todosLoaded])
     return(
         <TodoApp createTodoItem={createTodoItem} todoList={todoList}/>
     )
@@ -21,9 +21,8 @@ const TodoAppContainer = ({ fetchTodos, todos, todosLoaded, createTodoItem, todo
 
 
 
-const mapStateToProps = ({ firestore: { ordered:{todos},status:{requested}}, todoList }) =>{
+const mapStateToProps = ({ firestore: { status:{requested} }, todoList }) =>{
     return {
-        todos,
         todoList,
         todosLoaded: requested.todos
     }

@@ -22,9 +22,10 @@ const dataError = ( error ) =>{
     }
 };
 
-export const fetchData = (products,categories) => (dispatch, getState, {todoService}) =>{
+export const fetchData = () => (dispatch, getState, {todoService}) =>{
+    const todos = getState().firestore.ordered.todos;
     dispatch(dataRequested());
-    todoService.setData(products,categories)
+    todoService.setData(todos)
         .then((data) => dispatch(dataLoaded(data)))
         .catch((error) => dispatch(dataError(error)));
 };

@@ -22,4 +22,12 @@ export default class TodoService {
             .doc(todoId)
             .delete()
     }
+
+    changeTodoItem = async (todoId, data) =>{
+        return this.firestore
+            .collection(this.collectionName)
+            .doc(todoId)
+            .update(data)
+    }
+
 }
